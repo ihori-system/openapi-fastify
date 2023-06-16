@@ -14,6 +14,10 @@ jobs:
   test:
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idruns-on
     runs-on: [ubuntu-latest]
+    strategy:
+      matrix:
+        # https://github.com/nodejs/release#release-schedule
+        node: [ 16, 18, 20 ]
 
     steps:
       # https://github.com/actions/checkout
@@ -23,3 +27,13 @@ jobs:
       - uses: streetsidesoftware/cspell-action@v2
         with:
           incremental_files_only: false
+
+      # https://github.com/actions/setup-node
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+          cache: 'npm'
+
+      - run: npm ci
+
+      - run: npm run lint

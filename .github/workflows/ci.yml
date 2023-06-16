@@ -13,9 +13,10 @@ on:
 jobs:
   test:
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idruns-on
-    runs-on: [ubuntu-latest]
+    runs-on: [macos-latest, ubuntu-latest]
     strategy:
       matrix:
+        os: [macos-latest, ubuntu-latest]
         # https://github.com/nodejs/release#release-schedule
         node: [ 16, 18, 20 ]
 

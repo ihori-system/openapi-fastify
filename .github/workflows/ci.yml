@@ -1,0 +1,20 @@
+name: Continuous Integeration
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  test:
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idruns-on
+    runs-on: [ubuntu-latest]
+
+    steps:
+      # https://github.com/actions/checkout
+      - uses: actions/checkout@v3

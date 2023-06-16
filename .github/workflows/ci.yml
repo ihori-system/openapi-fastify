@@ -18,3 +18,8 @@ jobs:
     steps:
       # https://github.com/actions/checkout
       - uses: actions/checkout@v3
+
+      # https://github.com/streetsidesoftware/cspell-action
+      - uses: streetsidesoftware/cspell-action@v2
+        with:
+          incremental_files_only: false

@@ -25,6 +25,12 @@ test('generate from json', async (t) => {
   await equal(t, 'webhook-example')
 
   /**
+   * Examples in OpenAPI Specification
+   */
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#info-object-example
+  await equal(t, 'info-object-example')
+
+  /**
    * Custom fixtures
    */
   await equal(t, 'openapi-object-without-paths-object')

@@ -21,6 +21,8 @@ test('generate from json', async (t) => {
    */
   // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.1/non-oauth-scopes.json
   await equal(t, 'non-oauth-scopes')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.1/webhook-example.json
+  await equal(t, 'webhook-example')
 
   /**
    * Custom fixtures

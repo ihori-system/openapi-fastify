@@ -29,3 +29,23 @@ test('generate from json', async (t) => {
    */
   await equal(t, 'openapi-object-without-paths-object')
 })
+
+test('generate from json', async (t) => {
+  const equal = async (t, target) =>
+    await t.test(target, () => assert.equal(
+      printer.printFile(generate(path.join('test/v3.1/fixtures/yaml', `${target}.yaml`))),
+      fs.readFileSync(path.join(__dirname, '../fixtures/schema', `${target}.ts`), 'utf8')
+    ))
+
+  /**
+   * Examples in OAI/OpenAPI-Specification repository
+   */
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.1/non-oauth-scopes.json
+  await equal(t, 'non-oauth-scopes')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.1/webhook-example.json
+  await equal(t, 'webhook-example')
+})
+
+test('unknown file type', async (t) => {
+  assert.throws(() => generate('test/v3.1/fixtures/bar/foo.bar'))
+})

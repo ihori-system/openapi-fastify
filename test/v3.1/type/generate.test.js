@@ -34,6 +34,8 @@ test('generate from json', async (t) => {
    */
   // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#info-object-example
   await equal(t, 'info-object-example')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#components-object-example
+  await equal(t, 'components-object-example')
 
   /**
    * Custom fixtures

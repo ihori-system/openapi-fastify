@@ -1,14 +1,6 @@
-export const getNameById = {
-    params: {
-        type: "object",
-        properties: {
-            id: {
-                type: "string"
-            }
-        }
-    },
+export const getPet = {
     response: {
-        200: {
+        default: {
             content: {
                 "application/json": {
                     schema: {

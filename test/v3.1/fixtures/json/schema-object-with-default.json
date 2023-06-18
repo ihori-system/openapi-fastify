@@ -1,0 +1,34 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Defaults",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/user": {
+      "get": {
+        "operationId": "getUser",
+        "responses": {
+          "200": {
+            "description": "Returns a user",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "true": {
+                      "default": true
+                    },
+                    "false": {
+                      "default": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

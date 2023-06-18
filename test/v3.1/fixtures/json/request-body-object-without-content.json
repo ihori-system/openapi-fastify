@@ -1,0 +1,17 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Request Body Object without content",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/user": {
+      "post": {
+        "operationId": "postUser",
+        "requestBody": {
+          "description": "user to add to the system"
+        }
+      }
+    }
+  }
+}

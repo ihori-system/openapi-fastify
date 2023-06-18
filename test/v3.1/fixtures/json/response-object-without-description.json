@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Path Item Object Example",
+    "title": "Response Object without description",
     "version": "1.0.0"
   },
   "paths": {
@@ -11,7 +11,6 @@
         "operationId": "getNameById",
         "responses": {
           "200": {
-            "description": "success",
             "content": {
               "application/json": {
                 "schema": {
@@ -26,25 +25,7 @@
             }
           }
         }
-      },
-      "parameters": [
-        {
-          "name": "id",
-          "in": "path",
-          "description": "ID of name",
-          "required": false,
-          "schema": {
-            "type": "string"
-          },
-          "style": "simple"
-        }
-      ]
-    }
-  },
-  "components": {
-    "schemas": {
-      "Pet": {},
-      "ErrorModel": {}
+      }
     }
   }
 }

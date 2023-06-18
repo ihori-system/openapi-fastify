@@ -16,6 +16,11 @@ test('generate from json', async (t) => {
       fs.readFileSync(path.join(__dirname, '../fixtures/schema', `${target}.ts`), 'utf8')
     ))
 
+  const throws = async (t, target) =>
+    await t.test(target, () => assert.throws(
+      () => generate(path.join('test/v3.1/fixtures/json', `${target}.json`))
+    ))
+
   /**
    * Examples in OAI/OpenAPI-Specification repository
    */
@@ -31,11 +36,14 @@ test('generate from json', async (t) => {
   await equal(t, 'info-object-example')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#components-object-example
   await equal(t, 'components-object-example')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#paths-object-example
+  await equal(t, 'paths-object-example')
 
   /**
    * Custom fixtures
    */
   await equal(t, 'openapi-object-without-paths-object')
+  await throws(t, 'reference-object-with-invalid-format')
 })
 
 test('generate from json', async (t) => {

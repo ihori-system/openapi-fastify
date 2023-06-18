@@ -5,7 +5,7 @@
     "version": "1.0.0"
   },
   "paths": {
-    "/name/{id}": {
+    "/name": {
       "get": {
         "description": "Returns a name",
         "operationId": "getNameById",

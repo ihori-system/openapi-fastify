@@ -1,4 +1,4 @@
-name: Continuous Integeration
+name: Continuous Integration
 
 on:
   push:

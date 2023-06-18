@@ -71,6 +71,7 @@ test('generate from json', async (t) => {
   await throws(t, 'reference-object-with-invalid-format')
   await throws(t, 'request-body-object-without-content')
   await equal(t, 'schema-object-with-default')
+  await equal(t, 'schema-object-with-enum')
 })
 
 test('generate from json', async (t) => {

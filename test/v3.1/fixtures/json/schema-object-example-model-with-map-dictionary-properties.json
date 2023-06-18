@@ -1,0 +1,29 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Schema Object Example Model with Map/Dictionary Properties",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/user": {
+      "get": {
+        "operationId": "getUser",
+        "responses": {
+          "200": {
+            "description": "Returns a user",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

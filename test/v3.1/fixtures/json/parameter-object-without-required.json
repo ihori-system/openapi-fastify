@@ -40,11 +40,5 @@
         }
       ]
     }
-  },
-  "components": {
-    "schemas": {
-      "Pet": {},
-      "ErrorModel": {}
-    }
   }
 }

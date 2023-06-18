@@ -5,7 +5,7 @@
     "version": "1.0.0"
   },
   "paths": {
-    "/pet/{id}": {
+    "/pet/{petId}": {
       "put": {
         "tags": [
           "pet"

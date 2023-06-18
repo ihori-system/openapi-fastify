@@ -5,9 +5,9 @@
     "version": "1.0.0"
   },
   "paths": {
-    "/pet/{id}": {
+    "/pet": {
       "get": {
-        "description": "Returns pets based on ID",
+        "description": "Returns a pet",
         "operationId": "getPet",
         "responses": {
           "default": {

@@ -77,7 +77,7 @@ test('generate from json', async (t) => {
   await equal(t, 'schema-object-with-instance-data-models')
 })
 
-test('generate from json', async (t) => {
+test('generate from yaml', async (t) => {
   const equal = async (t, target) =>
     await t.test(target, () => assert.equal(
       printer.printFile(generate(path.join('test/v3.1/fixtures/yaml', `${target}.yaml`))),

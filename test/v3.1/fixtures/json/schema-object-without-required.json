@@ -1,0 +1,14 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Schema Object without required",
+    "version": "1.0.0"
+  },
+  "components": {
+    "schemas": {
+      "Pet": {
+        "properties": {}
+      }  
+    }
+  }
+}

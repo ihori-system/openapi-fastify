@@ -16,9 +16,49 @@ test('generate from json', async (t) => {
       fs.readFileSync(path.join(__dirname, '../fixtures/type', `${target}.ts`), 'utf8')
     ))
 
+  const throws = async (t, target) =>
+    await t.test(target, () => assert.throws(
+      () => generate(path.join('test/v3.1/fixtures/json', `${target}.json`))
+    ))
+
   /**
    * Examples in OAI/OpenAPI-Specification repository
    */
   // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.1/non-oauth-scopes.json
   await equal(t, 'non-oauth-scopes')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.1/webhook-example.json
+  await equal(t, 'webhook-example')
+
+  /**
+   * Examples in OpenAPI Specification
+   */
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#info-object-example
+  await equal(t, 'info-object-example')
+
+  /**
+   * Custom fixtures
+   */
+  await throws(t, 'openapi-object-without-info-object')
+  await equal(t, 'schema-object-with-invalid-properties')
+  await equal(t, 'schema-object-without-required')
+})
+
+test('generate from yaml', async (t) => {
+  const equal = async (t, target) =>
+    await t.test(target, () => assert.equal(
+      printer.printFile(generate(path.join('test/v3.1/fixtures/yaml', `${target}.yaml`))),
+      fs.readFileSync(path.join(__dirname, '../fixtures/type', `${target}.ts`), 'utf8')
+    ))
+
+  /**
+   * Examples in OAI/OpenAPI-Specification repository
+   */
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.1/non-oauth-scopes.json
+  await equal(t, 'non-oauth-scopes')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.1/webhook-example.json
+  await equal(t, 'webhook-example')
+})
+
+test('unknown file type', async (t) => {
+  assert.throws(() => generate('test/v3.1/fixtures/bar/foo.bar'))
 })

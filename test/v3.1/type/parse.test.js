@@ -1,16 +1,16 @@
 const assert = require('node:assert').strict
 const test = require('node:test')
+const ts = require('typescript')
 const {
-  parseComponentsObject,
-  parsePathsObject
+  toTypeNode
 } = require('../../../lib/v3.1/type/parse')
 
-test('parse', async (t) => {
-  await t.test('parseComponentsObject', () => {
-    assert.equal(parseComponentsObject(), undefined)
+test('toTypeNode', async (t) => {
+  await t.test('string', () => {
+    assert.deepEqual(toTypeNode('', {}, { type: 'string' }), ts.factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword))
   })
 
-  await t.test('parsePathsObject', () => {
-    assert.equal(parsePathsObject(), undefined)
+  await t.test('unexpected type', () => {
+    assert.throws(() => toTypeNode('', {}, { type: 'xxxxx' }))
   })
 })

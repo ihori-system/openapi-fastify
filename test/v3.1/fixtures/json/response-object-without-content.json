@@ -1,0 +1,20 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Response Object without content",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/name": {
+      "get": {
+        "description": "Returns a name",
+        "operationId": "getNameById",
+        "responses": {
+          "200": {
+            "description": "success"
+          }
+        }
+      }
+    }
+  }
+}

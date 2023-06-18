@@ -38,11 +38,14 @@ test('generate from json', async (t) => {
   await equal(t, 'components-object-example')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#paths-object-example
   await equal(t, 'paths-object-example')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#path-item-object
+  await equal(t, 'path-item-object-example')
 
   /**
    * Custom fixtures
    */
   await equal(t, 'openapi-object-without-paths-object')
+  await equal(t, 'parameter-object-without-required')
   await throws(t, 'reference-object-with-invalid-format')
 })
 

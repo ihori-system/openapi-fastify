@@ -45,11 +45,18 @@ test('generate from yaml', async (t) => {
       fs.readFileSync(path.join(__dirname, '../fixtures/schema', `${target}.ts`), 'utf8')
     ))
 
+  const throws = async (t, target) =>
+    await t.test(target, () => assert.throws(
+      () => generate(path.join('test/v3.0/fixtures/yaml', `${target}.yaml`))
+    ))
+
   /**
    * Examples in OAI/OpenAPI-Specification repository
    */
   // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/api-with-examples.yaml
   await equal(t, 'api-with-examples')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/callback-example.yaml
+  await throws(t, 'callback-example')
 })
 
 test('unknown file type', async (t) => {

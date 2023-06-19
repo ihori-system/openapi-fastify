@@ -1,4 +1,4 @@
-export interface petSchema {
-}
 export interface getPetsReply200 {
+}
+export interface petSchema {
 }

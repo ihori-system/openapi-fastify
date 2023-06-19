@@ -38,12 +38,16 @@ test('generate from json', async (t) => {
   await equal(t, 'components-object-example')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#paths-object-example
   await equal(t, 'paths-object-example')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#path-item-object
+  await equal(t, 'path-item-object-example')
 
   /**
    * Custom fixtures
    */
   await throws(t, 'openapi-object-without-info-object')
+  await equal(t, 'path-item-object-with-parameter-object')
   await equal(t, 'response-object-without-content')
+  await equal(t, 'schema-object-with-array')
   await equal(t, 'schema-object-with-invalid-properties')
   await equal(t, 'schema-object-without-required')
 })

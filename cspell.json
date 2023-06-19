@@ -8,5 +8,11 @@
     "openapi",
     "petstore",
     "picocolors"
+  ],
+  "ignoreWords": [
+    "describedby",
+    "detailsv",
+    "versionsv",
+    "wadl"
   ]
 }

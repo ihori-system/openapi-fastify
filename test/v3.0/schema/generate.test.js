@@ -30,6 +30,7 @@ test('generate from json', async (t) => {
    * Custom fixtures
    */
   await throws(t, 'openapi-object-without-info-object')
+  await throws(t, 'openapi-object-without-paths-object')
 })
 
 test('generate from yaml', async (t) => {

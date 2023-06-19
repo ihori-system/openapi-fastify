@@ -12,6 +12,8 @@
   "ignoreWords": [
     "describedby",
     "detailsv",
+    "pullrequest",
+    "pullrequests",
     "versionsv",
     "wadl"
   ]

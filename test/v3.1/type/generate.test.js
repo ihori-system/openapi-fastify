@@ -44,6 +44,8 @@ test('generate from json', async (t) => {
   await equal(t, 'operation-object-example')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#parameter-object-examples
   await equal(t, 'parameter-object-examples')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#request-body-examples
+  await equal(t, 'request-body-example')
 
   /**
    * Custom fixtures

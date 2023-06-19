@@ -60,6 +60,8 @@ test('generate from json', async (t) => {
   await equal(t, 'schema-object-example-model-with-example')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#models-with-composition
   await equal(t, 'schema-object-example-models-with-composition')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#models-with-polymorphism-support
+  await equal(t, 'schema-object-example-models-with-polymorphism-support')
 
   /**
    * Custom fixtures

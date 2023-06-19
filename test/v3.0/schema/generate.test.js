@@ -28,6 +28,8 @@ test('generate from json', async (t) => {
   await equal(t, 'api-with-examples')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/callback-example.json
   await throws(t, 'callback-example')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/link-example.json
+  await equal(t, 'link-example')
 
   /**
    * Custom fixtures
@@ -57,6 +59,8 @@ test('generate from yaml', async (t) => {
   await equal(t, 'api-with-examples')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/callback-example.yaml
   await throws(t, 'callback-example')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/link-example.yaml
+  await equal(t, 'link-example')
 })
 
 test('unknown file type', async (t) => {

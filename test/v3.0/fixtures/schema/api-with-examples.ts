@@ -1,20 +1,28 @@
 export const listVersionsv2 = {
     response: {
         200: {
-            content: {}
+            content: {
+                "application/json": {}
+            }
         },
         300: {
-            content: {}
+            content: {
+                "application/json": {}
+            }
         }
     }
 };
 export const getVersionDetailsv2 = {
     response: {
         200: {
-            content: {}
+            content: {
+                "application/json": {}
+            }
         },
         203: {
-            content: {}
+            content: {
+                "application/json": {}
+            }
         }
     }
 };

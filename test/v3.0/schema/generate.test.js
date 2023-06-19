@@ -32,6 +32,7 @@ test('generate from json', async (t) => {
   await throws(t, 'openapi-object-without-info-object')
   await throws(t, 'openapi-object-without-paths-object')
   await throws(t, 'operation-object-without-responses')
+  await throws(t, 'response-object-without-description')
 })
 
 test('generate from yaml', async (t) => {

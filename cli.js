@@ -15,7 +15,6 @@ ${pc.bold('OPTIONS')}
   --input     OAS file
   --omit      omit schema or type <schema | type>
   --output    output path
-  --type      OAS file type <json | yaml>
 `
 
 const buildErrorMessage = (error) => `
@@ -24,6 +23,14 @@ ${pc.cyan('[openapi-fastify]')} ${pc.bgRed('ERROR')} ${error}
 
 const main = async () => {
   if (argv.help) {
+    return console.info(HELP)
+  }
+
+  if (argv.input == null) {
+    return console.info(HELP)
+  }
+
+  if (argv.output == null) {
     return console.info(HELP)
   }
 }

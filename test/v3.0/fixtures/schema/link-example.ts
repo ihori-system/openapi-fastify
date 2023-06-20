@@ -3,7 +3,9 @@ export const getUserByName = {
         200: {
             content: {
                 "application/json": {
-                    schema: {}
+                    schema: {
+                        type: "object"
+                    }
                 }
             }
         }
@@ -14,7 +16,9 @@ export const getRepositoriesByOwner = {
         200: {
             content: {
                 "application/json": {
-                    schema: {}
+                    schema: {
+                        type: "array"
+                    }
                 }
             }
         }
@@ -25,7 +29,9 @@ export const getRepository = {
         200: {
             content: {
                 "application/json": {
-                    schema: {}
+                    schema: {
+                        type: "object"
+                    }
                 }
             }
         }
@@ -36,7 +42,9 @@ export const getPullRequestsByRepository = {
         200: {
             content: {
                 "application/json": {
-                    schema: {}
+                    schema: {
+                        type: "array"
+                    }
                 }
             }
         }
@@ -47,7 +55,9 @@ export const getPullRequestsById = {
         200: {
             content: {
                 "application/json": {
-                    schema: {}
+                    schema: {
+                        type: "object"
+                    }
                 }
             }
         }

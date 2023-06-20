@@ -11,5 +11,8 @@
     "openapi",
     "petstore",
     "picocolors"
+  ],
+  "ignoreWords": [
+    "uspto"
   ]
 }

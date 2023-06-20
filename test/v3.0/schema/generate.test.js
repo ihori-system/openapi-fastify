@@ -34,6 +34,8 @@ test('generate from json', async (t) => {
   await throws(t, 'petstore-expanded')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore.json
   await equal(t, 'petstore')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/uspto.json
+  await throws(t, 'uspto')
 
   /**
    * Custom fixtures
@@ -70,6 +72,8 @@ test('generate from yaml', async (t) => {
   await throws(t, 'petstore-expanded')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore.yaml
   await equal(t, 'petstore')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/uspto.yaml
+  await throws(t, 'uspto')
 })
 
 test('unknown file type', async (t) => {

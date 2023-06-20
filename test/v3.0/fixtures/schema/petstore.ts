@@ -5,6 +5,7 @@ export const listPets = {
                 "application/json": {
                     schema: {
                         type: "array",
+                        maxItems: 100,
                         items: {
                             type: "object",
                             required: [

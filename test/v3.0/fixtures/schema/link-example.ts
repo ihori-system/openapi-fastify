@@ -4,7 +4,15 @@ export const getUserByName = {
             content: {
                 "application/json": {
                     schema: {
-                        type: "object"
+                        type: "object",
+                        properties: {
+                            username: {
+                                type: "string"
+                            },
+                            uuid: {
+                                type: "string"
+                            }
+                        }
                     }
                 }
             }
@@ -17,7 +25,26 @@ export const getRepositoriesByOwner = {
             content: {
                 "application/json": {
                     schema: {
-                        type: "array"
+                        type: "array",
+                        items: {
+                            type: "object",
+                            properties: {
+                                slug: {
+                                    type: "string"
+                                },
+                                owner: {
+                                    type: "object",
+                                    properties: {
+                                        username: {
+                                            type: "string"
+                                        },
+                                        uuid: {
+                                            type: "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -30,7 +57,23 @@ export const getRepository = {
             content: {
                 "application/json": {
                     schema: {
-                        type: "object"
+                        type: "object",
+                        properties: {
+                            slug: {
+                                type: "string"
+                            },
+                            owner: {
+                                type: "object",
+                                properties: {
+                                    username: {
+                                        type: "string"
+                                    },
+                                    uuid: {
+                                        type: "string"
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -43,7 +86,48 @@ export const getPullRequestsByRepository = {
             content: {
                 "application/json": {
                     schema: {
-                        type: "array"
+                        type: "array",
+                        items: {
+                            type: "object",
+                            properties: {
+                                id: {
+                                    type: "integer"
+                                },
+                                title: {
+                                    type: "string"
+                                },
+                                repository: {
+                                    type: "object",
+                                    properties: {
+                                        slug: {
+                                            type: "string"
+                                        },
+                                        owner: {
+                                            type: "object",
+                                            properties: {
+                                                username: {
+                                                    type: "string"
+                                                },
+                                                uuid: {
+                                                    type: "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                author: {
+                                    type: "object",
+                                    properties: {
+                                        username: {
+                                            type: "string"
+                                        },
+                                        uuid: {
+                                            type: "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -56,7 +140,45 @@ export const getPullRequestsById = {
             content: {
                 "application/json": {
                     schema: {
-                        type: "object"
+                        type: "object",
+                        properties: {
+                            id: {
+                                type: "integer"
+                            },
+                            title: {
+                                type: "string"
+                            },
+                            repository: {
+                                type: "object",
+                                properties: {
+                                    slug: {
+                                        type: "string"
+                                    },
+                                    owner: {
+                                        type: "object",
+                                        properties: {
+                                            username: {
+                                                type: "string"
+                                            },
+                                            uuid: {
+                                                type: "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            author: {
+                                type: "object",
+                                properties: {
+                                    username: {
+                                        type: "string"
+                                    },
+                                    uuid: {
+                                        type: "string"
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }

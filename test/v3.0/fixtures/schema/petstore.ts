@@ -4,7 +4,26 @@ export const listPets = {
             content: {
                 "application/json": {
                     schema: {
-                        type: "array"
+                        type: "array",
+                        items: {
+                            type: "object",
+                            required: [
+                                "id",
+                                "name"
+                            ],
+                            properties: {
+                                id: {
+                                    type: "integer",
+                                    format: "int64"
+                                },
+                                name: {
+                                    type: "string"
+                                },
+                                tag: {
+                                    type: "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -17,7 +36,16 @@ export const listPets = {
                         required: [
                             "code",
                             "message"
-                        ]
+                        ],
+                        properties: {
+                            code: {
+                                type: "integer",
+                                format: "int32"
+                            },
+                            message: {
+                                type: "string"
+                            }
+                        }
                     }
                 }
             }
@@ -35,7 +63,16 @@ export const createPets = {
                         required: [
                             "code",
                             "message"
-                        ]
+                        ],
+                        properties: {
+                            code: {
+                                type: "integer",
+                                format: "int32"
+                            },
+                            message: {
+                                type: "string"
+                            }
+                        }
                     }
                 }
             }
@@ -52,7 +89,19 @@ export const showPetById = {
                         required: [
                             "id",
                             "name"
-                        ]
+                        ],
+                        properties: {
+                            id: {
+                                type: "integer",
+                                format: "int64"
+                            },
+                            name: {
+                                type: "string"
+                            },
+                            tag: {
+                                type: "string"
+                            }
+                        }
                     }
                 }
             }
@@ -65,7 +114,16 @@ export const showPetById = {
                         required: [
                             "code",
                             "message"
-                        ]
+                        ],
+                        properties: {
+                            code: {
+                                type: "integer",
+                                format: "int32"
+                            },
+                            message: {
+                                type: "string"
+                            }
+                        }
                     }
                 }
             }

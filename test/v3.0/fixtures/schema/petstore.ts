@@ -13,7 +13,11 @@ export const listPets = {
             content: {
                 "application/json": {
                     schema: {
-                        type: "object"
+                        type: "object",
+                        required: [
+                            "code",
+                            "message"
+                        ]
                     }
                 }
             }
@@ -27,7 +31,11 @@ export const createPets = {
             content: {
                 "application/json": {
                     schema: {
-                        type: "object"
+                        type: "object",
+                        required: [
+                            "code",
+                            "message"
+                        ]
                     }
                 }
             }
@@ -40,7 +48,11 @@ export const showPetById = {
             content: {
                 "application/json": {
                     schema: {
-                        type: "object"
+                        type: "object",
+                        required: [
+                            "id",
+                            "name"
+                        ]
                     }
                 }
             }
@@ -49,7 +61,11 @@ export const showPetById = {
             content: {
                 "application/json": {
                     schema: {
-                        type: "object"
+                        type: "object",
+                        required: [
+                            "code",
+                            "message"
+                        ]
                     }
                 }
             }

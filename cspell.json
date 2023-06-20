@@ -5,6 +5,7 @@
     "test/v3.0/fixtures/**"
   ],
   "words": [
+    "autoload",
     "fastify",
     "horie",
     "ihori",

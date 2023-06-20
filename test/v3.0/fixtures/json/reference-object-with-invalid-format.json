@@ -1,0 +1,26 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Reference Object with invalid format",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/2.0/user": {
+      "get": {
+        "operationId": "getUser",
+        "responses": {
+          "200": {
+            "description": "The User",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": true
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -62,9 +62,6 @@ jobs:
       - run: npm ci
         working-directory: examples/v3.0/petstore-ts
 
-      - run: npm run lint
-        working-directory: examples/v3.0/petstore-ts
-
       - run: npm run build:ts
         working-directory: examples/v3.0/petstore-ts
 

@@ -4,21 +4,21 @@ const path = require('node:path')
 const test = require('node:test')
 const ts = require('typescript')
 const {
-  generate
-} = require('../../../lib/v3.1/schema/generate')
+  readAndGenerateSchema
+} = require('../../..')
 
 const printer = ts.createPrinter({ newLine: ts.NewLineKind.LineFeed })
 
 test('generate from json', async (t) => {
   const equal = async (t, target) =>
     await t.test(target, () => assert.equal(
-      printer.printFile(generate(path.join('test/v3.1/fixtures/json', `${target}.json`))),
+      printer.printFile(readAndGenerateSchema(path.join('test/v3.1/fixtures/json', `${target}.json`))),
       fs.readFileSync(path.join(__dirname, '../fixtures/schema', `${target}.ts`), 'utf8')
     ))
 
   const throws = async (t, target) =>
     await t.test(target, () => assert.throws(
-      () => generate(path.join('test/v3.1/fixtures/json', `${target}.json`))
+      () => readAndGenerateSchema(path.join('test/v3.1/fixtures/json', `${target}.json`))
     ))
 
   /**
@@ -80,7 +80,7 @@ test('generate from json', async (t) => {
 test('generate from yaml', async (t) => {
   const equal = async (t, target) =>
     await t.test(target, () => assert.equal(
-      printer.printFile(generate(path.join('test/v3.1/fixtures/yaml', `${target}.yaml`))),
+      printer.printFile(readAndGenerateSchema(path.join('test/v3.1/fixtures/yaml', `${target}.yaml`))),
       fs.readFileSync(path.join(__dirname, '../fixtures/schema', `${target}.ts`), 'utf8')
     ))
 
@@ -94,5 +94,9 @@ test('generate from yaml', async (t) => {
 })
 
 test('unknown file type', async (t) => {
-  assert.throws(() => generate('test/v3.1/fixtures/bar/foo.bar'))
+  assert.throws(() => readAndGenerateSchema('test/v3.1/fixtures/bar/foo.bar'))
+})
+
+test('unknown version', async (t) => {
+  assert.throws(() => readAndGenerateSchema('test/unknown/fixtures/unknown-version.json'))
 })

@@ -1,6 +1,9 @@
 {
   "version": "0.2",
   "language": "en",
+  "ignorePaths": [
+    "test/v3.0/fixtures/**"
+  ],
   "words": [
     "fastify",
     "horie",
@@ -8,13 +11,5 @@
     "openapi",
     "petstore",
     "picocolors"
-  ],
-  "ignoreWords": [
-    "describedby",
-    "detailsv",
-    "pullrequest",
-    "pullrequests",
-    "versionsv",
-    "wadl"
   ]
 }

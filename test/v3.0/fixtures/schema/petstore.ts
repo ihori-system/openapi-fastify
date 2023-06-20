@@ -9,10 +9,6 @@ export const listPets = {
             }
         }
     },
-    params: {
-        type: "object",
-        properties: {}
-    },
     response: {
         200: {
             content: {
@@ -78,10 +74,6 @@ export const createPets = {
             }
         }
     },
-    params: {
-        type: "object",
-        properties: {}
-    },
     response: {
         201: {},
         default: {
@@ -109,6 +101,17 @@ export const createPets = {
     }
 };
 export const showPetById = {
+    params: {
+        type: "object",
+        required: [
+            "petId"
+        ],
+        properties: {
+            petId: {
+                type: "string"
+            }
+        }
+    },
     headers: {
         type: "object",
         required: [

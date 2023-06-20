@@ -1,4 +1,15 @@
 export const getUserByName = {
+    params: {
+        type: "object",
+        required: [
+            "username"
+        ],
+        properties: {
+            username: {
+                type: "string"
+            }
+        }
+    },
     headers: {
         type: "object",
         required: [
@@ -31,6 +42,17 @@ export const getUserByName = {
     }
 };
 export const getRepositoriesByOwner = {
+    params: {
+        type: "object",
+        required: [
+            "username"
+        ],
+        properties: {
+            username: {
+                type: "string"
+            }
+        }
+    },
     headers: {
         type: "object",
         required: [
@@ -74,6 +96,21 @@ export const getRepositoriesByOwner = {
     }
 };
 export const getRepository = {
+    params: {
+        type: "object",
+        required: [
+            "username",
+            "slug"
+        ],
+        properties: {
+            username: {
+                type: "string"
+            },
+            slug: {
+                type: "string"
+            }
+        }
+    },
     headers: {
         type: "object",
         required: [
@@ -210,6 +247,25 @@ export const getPullRequestsByRepository = {
     }
 };
 export const getPullRequestsById = {
+    params: {
+        type: "object",
+        required: [
+            "username",
+            "slug",
+            "pid"
+        ],
+        properties: {
+            username: {
+                type: "string"
+            },
+            slug: {
+                type: "string"
+            },
+            pid: {
+                type: "string"
+            }
+        }
+    },
     headers: {
         type: "object",
         required: [
@@ -280,6 +336,25 @@ export const getPullRequestsById = {
     }
 };
 export const mergePullRequest = {
+    params: {
+        type: "object",
+        required: [
+            "username",
+            "slug",
+            "pid"
+        ],
+        properties: {
+            username: {
+                type: "string"
+            },
+            slug: {
+                type: "string"
+            },
+            pid: {
+                type: "string"
+            }
+        }
+    },
     headers: {
         type: "object",
         required: [

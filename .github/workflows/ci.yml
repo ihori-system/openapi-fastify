@@ -60,6 +60,8 @@ jobs:
           cache-dependency-path: 'examples/v3.0/petstore-ts/package-lock.json'
 
       - run: npm ci
+  
+      - run: npm ci
         working-directory: examples/v3.0/petstore-ts
 
       - run: npm run build:ts

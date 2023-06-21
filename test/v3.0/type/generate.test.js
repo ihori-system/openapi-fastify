@@ -24,7 +24,12 @@ test('generate from json', async (t) => {
   /**
    * Examples in OAI/OpenAPI-Specification repository
    */
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/api-with-examples.json
   await equal(t, 'api-with-examples')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/link-example.json
+  await equal(t, 'link-example')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore.json
+  await equal(t, 'petstore')
 
   /**
    * Custom fixtures

@@ -39,4 +39,7 @@ test('generate from json', async (t) => {
   await throws(t, 'operation-object-without-responses')
   await equal(t, 'response-object-without-content')
   await throws(t, 'response-object-without-description')
+  await equal(t, 'schema-object-with-array')
+  await equal(t, 'schema-object-with-empty-array')
+  await equal(t, 'schema-object-without-properties')
 })

@@ -1,8 +1,15 @@
 #!/usr/bin/env node
 
+const fs = require('fs')
+const path = require('node:path')
 const pc = require('picocolors')
+const ts = require('typescript')
 const argv = require('yargs-parser')(process.argv.slice(2))
 const packageJson = require('./package.json')
+const {
+  readAndGenerateSchema,
+  readAndGenerateType
+} = require('.')
 
 const HELP = `
 openapi-fastify - command line Fastify schema generator [version ${packageJson.version}]
@@ -33,6 +40,18 @@ const main = async () => {
   if (argv.output == null) {
     return console.info(HELP)
   }
+
+  const printer = ts.createPrinter({ newLine: ts.NewLineKind.LineFeed })
+
+  fs.writeFileSync(
+    path.join(process.cwd(), argv.output, 'schemas.ts'),
+    printer.printFile(readAndGenerateSchema(argv.input))
+  )
+
+  fs.writeFileSync(
+    path.join(process.cwd(), argv.output, 'interfaces.ts'),
+    printer.printFile(readAndGenerateType(argv.input))
+  )
 }
 
 main()

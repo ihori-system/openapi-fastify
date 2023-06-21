@@ -1,5 +1,8 @@
 check-coverage: true
 coverage: true
-
+coverage-report:
+  - html
+  - text
+no-browser: true
 files:
   - 'test/**/*.test.js'

@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "Response Object without description",
+    "title": "Schema Object with empty array",
     "version": "1.0.0"
   },
   "paths": {
@@ -10,9 +10,15 @@
         "operationId": "index",
         "responses": {
           "200": {
+            "description": "",
             "content": {
               "application/json": {
-                "schema": {}
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
               }
             }
           }

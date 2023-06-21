@@ -38,6 +38,12 @@ test('generate from json', async (t) => {
   await throws(t, 'uspto')
 
   /**
+   * Examples in OpenAPI Specification
+   */
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#parameter-object-examples
+  await equal(t, 'parameter-object-examples')
+
+  /**
    * Custom fixtures
    */
   await throws(t, 'openapi-object-without-info-object')

@@ -5,6 +5,7 @@ import {
 } from '../../generated/schemas'
 import {
   createPetsReplyDefault,
+  listPetsQuerystring,
   listPetsReply200,
   listPetsReplyDefault
 } from '../../generated/interfaces'
@@ -23,6 +24,7 @@ const pets: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
 
   fastify.route<{
     Reply: listPetsReply200 | listPetsReplyDefault
+    Querystring: listPetsQuerystring
   }>({
     method: 'GET',
     url: '/',

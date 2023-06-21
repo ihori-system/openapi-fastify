@@ -10,17 +10,6 @@ export const getUserByName = {
             }
         }
     },
-    headers: {
-        type: "object",
-        required: [
-            "username"
-        ],
-        properties: {
-            username: {
-                type: "string"
-            }
-        }
-    },
     response: {
         200: {
             content: {
@@ -43,17 +32,6 @@ export const getUserByName = {
 };
 export const getRepositoriesByOwner = {
     params: {
-        type: "object",
-        required: [
-            "username"
-        ],
-        properties: {
-            username: {
-                type: "string"
-            }
-        }
-    },
-    headers: {
         type: "object",
         required: [
             "username"
@@ -111,21 +89,6 @@ export const getRepository = {
             }
         }
     },
-    headers: {
-        type: "object",
-        required: [
-            "username",
-            "slug"
-        ],
-        properties: {
-            username: {
-                type: "string"
-            },
-            slug: {
-                type: "string"
-            }
-        }
-    },
     response: {
         200: {
             content: {
@@ -164,21 +127,6 @@ export const getPullRequestsByRepository = {
         }
     },
     params: {
-        type: "object",
-        required: [
-            "username",
-            "slug"
-        ],
-        properties: {
-            username: {
-                type: "string"
-            },
-            slug: {
-                type: "string"
-            }
-        }
-    },
-    headers: {
         type: "object",
         required: [
             "username",
@@ -266,25 +214,6 @@ export const getPullRequestsById = {
             }
         }
     },
-    headers: {
-        type: "object",
-        required: [
-            "username",
-            "slug",
-            "pid"
-        ],
-        properties: {
-            username: {
-                type: "string"
-            },
-            slug: {
-                type: "string"
-            },
-            pid: {
-                type: "string"
-            }
-        }
-    },
     response: {
         200: {
             content: {
@@ -337,25 +266,6 @@ export const getPullRequestsById = {
 };
 export const mergePullRequest = {
     params: {
-        type: "object",
-        required: [
-            "username",
-            "slug",
-            "pid"
-        ],
-        properties: {
-            username: {
-                type: "string"
-            },
-            slug: {
-                type: "string"
-            },
-            pid: {
-                type: "string"
-            }
-        }
-    },
-    headers: {
         type: "object",
         required: [
             "username",

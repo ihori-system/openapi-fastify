@@ -1,8 +1,9 @@
 import { FastifyPluginAsync } from "fastify"
-// import {
-//   showPetById
-// } from '../../../generated/schemas'
 import {
+  showPetById
+} from '../../../generated/schemas'
+import {
+  showPetByIdParams,
   showPetByIdReply200,
   showPetByIdReplyDefault
 } from '../../../generated/interfaces'
@@ -10,13 +11,14 @@ import {
 const pet: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
   fastify.route<{
     Reply: showPetByIdReply200 | showPetByIdReplyDefault
+    Params: showPetByIdParams
   }>({
     method: 'GET',
     url: '/',
-    // schema: showPetById,
+    schema: showPetById,
     handler: async function (request, reply) {
       return reply.send({
-        id: 1,
+        id: Number(request.params.petId),
         name: 'John',
         tag: 'Sports'
       })  

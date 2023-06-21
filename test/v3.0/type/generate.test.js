@@ -26,10 +26,16 @@ test('generate from json', async (t) => {
    */
   // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/api-with-examples.json
   await equal(t, 'api-with-examples')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/callback-example.json
+  await throws(t, 'callback-example')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/link-example.json
   await equal(t, 'link-example')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore-expanded.json
+  await throws(t, 'petstore-expanded')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore.json
   await equal(t, 'petstore')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/uspto.json
+  await throws(t, 'uspto')
 
   /**
    * Examples in OpenAPI Specification
@@ -43,6 +49,7 @@ test('generate from json', async (t) => {
   await throws(t, 'openapi-object-without-info-object')
   await throws(t, 'openapi-object-without-paths-object')
   await throws(t, 'operation-object-without-responses')
+  await throws(t, 'reference-object-with-invalid-format')
   await equal(t, 'response-object-without-content')
   await throws(t, 'response-object-without-description')
   await equal(t, 'schema-object-with-array')

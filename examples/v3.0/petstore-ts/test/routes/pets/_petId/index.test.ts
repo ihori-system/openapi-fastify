@@ -11,4 +11,3 @@ test('GET /pets/:id', async (t) => {
   t.equal(res.statusCode, 200)
   t.equal(res.payload, '{"id":1,"name":"John","tag":"Sports"}')
 })
-

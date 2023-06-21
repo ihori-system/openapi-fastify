@@ -102,17 +102,6 @@ export const showPetById = {
             }
         }
     },
-    headers: {
-        type: "object",
-        required: [
-            "petId"
-        ],
-        properties: {
-            petId: {
-                type: "string"
-            }
-        }
-    },
     response: {
         200: {
             content: {

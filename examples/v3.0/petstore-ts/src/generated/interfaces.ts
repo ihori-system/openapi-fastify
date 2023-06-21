@@ -1,3 +1,6 @@
+export interface listPetsQuerystring {
+    limit?: number;
+}
 export type listPetsReply200 = {
     id: number;
     name: string;
@@ -10,6 +13,9 @@ export interface listPetsReplyDefault {
 export interface createPetsReplyDefault {
     code: number;
     message: string;
+}
+export interface showPetByIdParams {
+    petId: string;
 }
 export interface showPetByIdReply200 {
     id: number;

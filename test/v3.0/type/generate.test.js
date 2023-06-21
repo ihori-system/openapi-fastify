@@ -16,8 +16,18 @@ test('generate from json', async (t) => {
       fs.readFileSync(path.join(__dirname, '../fixtures/type', `${target}.ts`), 'utf8')
     ))
 
+  const throws = async (t, target) =>
+    await t.test(target, () => assert.throws(
+      () => readAndGenerateType(path.join('test/v3.0/fixtures/json', `${target}.json`))
+    ))
+
   /**
    * Examples in OAI/OpenAPI-Specification repository
    */
   await equal(t, 'api-with-examples')
+
+  /**
+   * Custom fixtures
+   */
+  await throws(t, 'openapi-object-without-info-object')
 })

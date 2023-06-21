@@ -31,4 +31,7 @@ test('generate from json', async (t) => {
    */
   await throws(t, 'openapi-object-without-info-object')
   await throws(t, 'openapi-object-without-paths-object')
+  await throws(t, 'operation-object-without-responses')
+  await equal(t, 'response-object-without-content')
+  await throws(t, 'response-object-without-description')
 })

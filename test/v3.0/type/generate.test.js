@@ -60,6 +60,8 @@ test('generate from json', async (t) => {
   await equal(t, 'reference-object-example')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#primitive-sample
   await equal(t, 'schema-object-examples-primitive-sample')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#simple-model
+  await equal(t, 'schema-object-examples-simple-model')
 
   /**
    * Custom fixtures

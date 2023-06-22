@@ -243,3 +243,64 @@ export interface deleteUserParams {
     // The name that needs to be deleted
     username: string;
 }
+export interface OrderSchema {
+    id?: number;
+    petId?: number;
+    quantity?: number;
+    shipDate?: string;
+    status?: "placed" | "approved" | "delivered";
+    complete?: boolean;
+}
+export interface CustomerSchema {
+    id?: number;
+    username?: string;
+    address?: {
+        street?: string;
+        city?: string;
+        state?: string;
+        zip?: string;
+    }[];
+}
+export interface AddressSchema {
+    street?: string;
+    city?: string;
+    state?: string;
+    zip?: string;
+}
+export interface CategorySchema {
+    id?: number;
+    name?: string;
+}
+export interface UserSchema {
+    id?: number;
+    username?: string;
+    firstName?: string;
+    lastName?: string;
+    email?: string;
+    password?: string;
+    phone?: string;
+    userStatus?: number;
+}
+export interface TagSchema {
+    id?: number;
+    name?: string;
+}
+export interface PetSchema {
+    id?: number;
+    name: string;
+    category?: {
+        id?: number;
+        name?: string;
+    };
+    photoUrls: string[];
+    tags?: {
+        id?: number;
+        name?: string;
+    }[];
+    status?: "available" | "pending" | "sold";
+}
+export interface ApiResponseSchema {
+    code?: number;
+    type?: string;
+    message?: string;
+}

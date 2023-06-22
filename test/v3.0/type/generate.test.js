@@ -42,12 +42,15 @@ test('generate from json', async (t) => {
    */
   // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#info-object-example
   await equal(t, 'info-object-example')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#components-object-example
+  await equal(t, 'components-object-example')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#parameter-object-examples
   await equal(t, 'parameter-object-examples')
 
   /**
    * Custom fixtures
    */
+  await equal(t, 'components-object-without-schemas')
   await throws(t, 'openapi-object-without-info-object')
   await throws(t, 'openapi-object-without-paths-object')
   await throws(t, 'operation-object-without-responses')

@@ -73,3 +73,29 @@ export interface mergePullRequestParams {
     slug: string;
     pid: string;
 }
+export interface userSchema {
+    username?: string;
+    uuid?: string;
+}
+export interface repositorySchema {
+    slug?: string;
+    owner?: {
+        username?: string;
+        uuid?: string;
+    };
+}
+export interface pullrequestSchema {
+    id?: number;
+    title?: string;
+    repository?: {
+        slug?: string;
+        owner?: {
+            username?: string;
+            uuid?: string;
+        };
+    };
+    author?: {
+        username?: string;
+        uuid?: string;
+    };
+}

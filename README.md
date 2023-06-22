@@ -10,3 +10,13 @@ Command line tool for Fastify, Generate schemas from OpenAPI JSON.
 ```
 npx openapi-fastify --input <file> --output <path> [options]
 ```
+
+## Examples
+
+| OpenAPI Version | Language | Example |
+| ------------- | ------------- | ------------- |
+| 3.0.0 | TypeScript | [petstore-ts](https://github.com/ihori-system/openapi-fastify/tree/develop/examples/v3.0/petstore-ts) |
+
+## License
+
+Licensed under MIT.

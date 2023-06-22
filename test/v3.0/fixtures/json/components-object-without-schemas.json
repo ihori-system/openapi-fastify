@@ -1,0 +1,9 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Components Object without schema",
+    "version": "1.0.1"
+  },
+  "paths": {},
+  "components": {}
+}

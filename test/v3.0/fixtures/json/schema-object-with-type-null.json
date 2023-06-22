@@ -1,0 +1,26 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Schema Object with type null",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "operationId": "index",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "null"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

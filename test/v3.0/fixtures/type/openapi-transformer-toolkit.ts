@@ -10,6 +10,7 @@ export interface updatePetBody {
         id?: number;
         name?: string;
     }[];
+    // pet status in the store
     status?: "available" | "pending" | "sold";
 }
 export interface updatePetReply200 {
@@ -24,6 +25,7 @@ export interface updatePetReply200 {
         id?: number;
         name?: string;
     }[];
+    // pet status in the store
     status?: "available" | "pending" | "sold";
 }
 export interface addPetBody {
@@ -38,6 +40,7 @@ export interface addPetBody {
         id?: number;
         name?: string;
     }[];
+    // pet status in the store
     status?: "available" | "pending" | "sold";
 }
 export interface addPetReply200 {
@@ -52,6 +55,7 @@ export interface addPetReply200 {
         id?: number;
         name?: string;
     }[];
+    // pet status in the store
     status?: "available" | "pending" | "sold";
 }
 export interface findPetsByStatusQuerystring {
@@ -70,6 +74,7 @@ export type findPetsByStatusReply200 = {
         id?: number;
         name?: string;
     }[];
+    // pet status in the store
     status?: "available" | "pending" | "sold";
 }[];
 export interface findPetsByTagsQuerystring {
@@ -88,6 +93,7 @@ export type findPetsByTagsReply200 = {
         id?: number;
         name?: string;
     }[];
+    // pet status in the store
     status?: "available" | "pending" | "sold";
 }[];
 export interface getPetByIdParams {
@@ -106,6 +112,7 @@ export interface getPetByIdReply200 {
         id?: number;
         name?: string;
     }[];
+    // pet status in the store
     status?: "available" | "pending" | "sold";
 }
 export interface updatePetWithFormQuerystring {
@@ -145,6 +152,7 @@ export interface placeOrderBody {
     petId?: number;
     quantity?: number;
     shipDate?: string;
+    // Order Status
     status?: "placed" | "approved" | "delivered";
     complete?: boolean;
 }
@@ -153,6 +161,7 @@ export interface placeOrderReply200 {
     petId?: number;
     quantity?: number;
     shipDate?: string;
+    // Order Status
     status?: "placed" | "approved" | "delivered";
     complete?: boolean;
 }
@@ -165,6 +174,7 @@ export interface getOrderByIdReply200 {
     petId?: number;
     quantity?: number;
     shipDate?: string;
+    // Order Status
     status?: "placed" | "approved" | "delivered";
     complete?: boolean;
 }
@@ -180,6 +190,7 @@ export interface createUserBody {
     email?: string;
     password?: string;
     phone?: string;
+    // User Status
     userStatus?: number;
 }
 export interface createUserReplyDefault {
@@ -190,6 +201,7 @@ export interface createUserReplyDefault {
     email?: string;
     password?: string;
     phone?: string;
+    // User Status
     userStatus?: number;
 }
 export interface createUsersWithListInputBody {
@@ -202,6 +214,7 @@ export interface createUsersWithListInputReply200 {
     email?: string;
     password?: string;
     phone?: string;
+    // User Status
     userStatus?: number;
 }
 export interface loginUserQuerystring {
@@ -223,6 +236,7 @@ export interface getUserByNameReply200 {
     email?: string;
     password?: string;
     phone?: string;
+    // User Status
     userStatus?: number;
 }
 export interface updateUserBody {
@@ -233,6 +247,7 @@ export interface updateUserBody {
     email?: string;
     password?: string;
     phone?: string;
+    // User Status
     userStatus?: number;
 }
 export interface updateUserParams {
@@ -248,6 +263,7 @@ export interface OrderSchema {
     petId?: number;
     quantity?: number;
     shipDate?: string;
+    // Order Status
     status?: "placed" | "approved" | "delivered";
     complete?: boolean;
 }
@@ -279,6 +295,7 @@ export interface UserSchema {
     email?: string;
     password?: string;
     phone?: string;
+    // User Status
     userStatus?: number;
 }
 export interface TagSchema {
@@ -297,6 +314,7 @@ export interface PetSchema {
         id?: number;
         name?: string;
     }[];
+    // pet status in the store
     status?: "available" | "pending" | "sold";
 }
 export interface ApiResponseSchema {

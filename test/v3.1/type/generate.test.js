@@ -67,9 +67,18 @@ test('generate from json', async (t) => {
    * Custom fixtures
    */
   await throws(t, 'openapi-object-without-info-object')
+  await equal(t, 'openapi-object-without-paths-object')
+  await equal(t, 'parameter-object-without-required')
   await equal(t, 'path-item-object-with-parameter-object')
+  await throws(t, 'reference-object-with-invalid-format')
+  await throws(t, 'request-body-object-without-content')
+  await equal(t, 'request-body-object-without-schema')
   await equal(t, 'response-object-without-content')
+  await throws(t, 'response-object-without-description')
+  await equal(t, 'schema-object-with-default')
   await equal(t, 'schema-object-with-array')
+  await equal(t, 'schema-object-with-enum')
+  await equal(t, 'schema-object-with-instance-data-models')
   await equal(t, 'schema-object-with-invalid-properties')
   await equal(t, 'schema-object-without-required')
 })

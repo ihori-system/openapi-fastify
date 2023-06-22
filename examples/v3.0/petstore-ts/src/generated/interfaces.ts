@@ -28,3 +28,14 @@ export interface showPetByIdReplyDefault {
     code: number;
     message: string;
 }
+export interface PetSchema {
+    id: number;
+    name: string;
+    tag?: string;
+}
+export interface PetsSchema {
+}
+export interface ErrorSchema {
+    code: number;
+    message: string;
+}

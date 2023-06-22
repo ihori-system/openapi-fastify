@@ -5,7 +5,9 @@ export const getPets = {
                 "application/json": {
                     schema: {
                         type: "array",
-                        items: {}
+                        items: {
+                            type: "object"
+                        }
                     }
                 }
             }

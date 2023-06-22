@@ -5,13 +5,13 @@
     "version": "1.0.0"
   },
   "paths": {
-    "/name": {
+    "/": {
       "get": {
         "description": "Returns a name",
-        "operationId": "getNameById",
+        "operationId": "index",
         "responses": {
           "200": {
-            "description": "success"
+            "description": ""
           }
         }
       }

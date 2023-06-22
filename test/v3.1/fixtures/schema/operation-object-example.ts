@@ -14,14 +14,12 @@ export const updatePetWithForm = {
     response: {
         200: {
             content: {
-                "application/json": {},
-                "application/xml": {}
+                "application/json": {}
             }
         },
         405: {
             content: {
-                "application/json": {},
-                "application/xml": {}
+                "application/json": {}
             }
         }
     }

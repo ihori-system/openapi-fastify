@@ -15,21 +15,10 @@ export const getPetsById = {
     },
     response: {
         200: {
-            content: {
-                "*/*": {
-                    schema: {
-                        type: "array",
-                        items: {}
-                    }
-                }
-            }
+            content: {}
         },
         default: {
-            content: {
-                "text/html": {
-                    schema: {}
-                }
-            }
+            content: {}
         }
     }
 };

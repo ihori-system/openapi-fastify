@@ -1,0 +1,18 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Request Body Object without schema",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/user": {
+      "post": {
+        "operationId": "postUser",
+        "requestBody": {
+          "content": {}
+        },
+        "responses": {}
+      }
+    }
+  }
+}

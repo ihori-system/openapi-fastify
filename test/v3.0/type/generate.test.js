@@ -66,7 +66,7 @@ test('generate from json', async (t) => {
   await equal(t, 'schema-object-examples-model-with-map-dictionary-properties')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#model-with-example
   await equal(t, 'schema-object-examples-model-with-example')
-  // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#models-with-composition
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#models-with-composition
   await equal(t, 'schema-object-examples-models-with-composition')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#models-with-polymorphism-support
   await equal(t, 'schema-object-examples-models-with-polymorphism-support')

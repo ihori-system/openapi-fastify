@@ -56,3 +56,17 @@ test('generate from json', async (t) => {
   await equal(t, 'schema-object-with-empty-array')
   await equal(t, 'schema-object-without-properties')
 })
+
+test('generate from yml', async (t) => {
+  const equal = async (t, target) =>
+    await t.test(target, () => assert.equal(
+      printer.printFile(readAndGenerateType(path.join('test/v3.0/fixtures/yml', `${target}.yml`))),
+      fs.readFileSync(path.join(__dirname, '../fixtures/type', `${target}.ts`), 'utf8')
+    ))
+
+  /**
+   * Third party tools
+   */
+  // https://github.com/nearform/openapi-transformer-toolkit/blob/master/test/fixtures/openapi.yml
+  await equal(t, 'openapi-transformer-toolkit')
+})

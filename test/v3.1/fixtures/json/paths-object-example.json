@@ -29,7 +29,9 @@
   },
   "components": {
     "schemas": {
-      "pet": {}
+      "pet": {
+        "type": "object"
+      }
     }
   }
 }

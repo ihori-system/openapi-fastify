@@ -40,6 +40,8 @@ test('generate from json', async (t) => {
   /**
    * Examples in OpenAPI Specification
    */
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#info-object-example
+  await equal(t, 'info-object-example')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#parameter-object-examples
   await equal(t, 'parameter-object-examples')
 

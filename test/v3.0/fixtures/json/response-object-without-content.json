@@ -7,6 +7,7 @@
   "paths": {
     "/": {
       "get": {
+        "description": "Returns a name",
         "operationId": "index",
         "responses": {
           "200": {

@@ -86,6 +86,20 @@ test('generate from yaml', async (t) => {
   await throws(t, 'uspto')
 })
 
+test('generate from yml', async (t) => {
+  const equal = async (t, target) =>
+    await t.test(target, () => assert.equal(
+      printer.printFile(readAndGenerateSchema(path.join('test/v3.0/fixtures/yml', `${target}.yml`))),
+      fs.readFileSync(path.join(__dirname, '../fixtures/schema', `${target}.ts`), 'utf8')
+    ))
+
+  /**
+   * Third party tools
+   */
+  // https://github.com/nearform/openapi-transformer-toolkit/blob/master/test/fixtures/openapi.yml
+  await equal(t, 'openapi-transformer-toolkit')
+})
+
 test('unknown file type', async (t) => {
   assert.throws(() => readAndGenerateSchema('test/v3.0/fixtures/bar/foo.bar'))
 })

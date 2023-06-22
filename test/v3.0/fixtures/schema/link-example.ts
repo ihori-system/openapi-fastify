@@ -122,6 +122,11 @@ export const getPullRequestsByRepository = {
         type: "object",
         properties: {
             state: {
+                enum: [
+                    "open",
+                    "merged",
+                    "declined"
+                ],
                 type: "string"
             }
         }

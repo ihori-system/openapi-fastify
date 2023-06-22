@@ -17,7 +17,7 @@ function readAndGenerateSchema (inputPath) {
   const ext = path.extname(inputPath)
   if (ext === '.json') {
     openapiObject = JSON.parse(inputRaw)
-  } else if (ext === '.yaml') {
+  } else if (ext === '.yaml' || ext === '.yml') {
     openapiObject = yaml.load(inputRaw)
   } else {
     throw new Error(`'unknown input file type. valid extensions are '.json' or '.yaml'. given input path: ${inputPath}`)
@@ -41,7 +41,7 @@ function readAndGenerateType (inputPath) {
   const ext = path.extname(inputPath)
   if (ext === '.json') {
     openapiObject = JSON.parse(inputRaw)
-  } else if (inputPath.endsWith('.yaml')) {
+  } else if (ext === '.yaml' || ext === '.yml') {
     openapiObject = yaml.load(inputRaw)
   } else {
     throw new Error(`'unknown input file type. valid extensions are '.json' or '.yaml'. given input path: ${inputPath}`)

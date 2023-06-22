@@ -62,6 +62,8 @@ test('generate from json', async (t) => {
   await equal(t, 'schema-object-examples-primitive-sample')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#simple-model
   await equal(t, 'schema-object-examples-simple-model')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#model-with-mapdictionary-properties
+  await equal(t, 'schema-object-examples-model-with-map-dictionary-properties')
 
   /**
    * Custom fixtures

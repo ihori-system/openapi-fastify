@@ -48,6 +48,8 @@ test('generate from json', async (t) => {
   await equal(t, 'paths-object-example')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#path-item-object
   await equal(t, 'path-item-object-example')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#operation-object-example
+  await equal(t, 'operation-object-example')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#parameter-object-examples
   await equal(t, 'parameter-object-examples')
 

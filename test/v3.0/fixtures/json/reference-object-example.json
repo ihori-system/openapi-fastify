@@ -1,0 +1,33 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Reference Object Example",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/pet": {
+      "get": {
+        "operationId": "getPet",
+        "responses": {
+          "200": {
+            "description": "The Pet",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pet"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Pet": {
+        "type": "object"
+      }
+    }
+  }
+}

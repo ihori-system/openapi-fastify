@@ -6,11 +6,20 @@
   },
   "components": {
     "schemas": {
+      "Hobby": {
+        "type": "string"
+      },
       "User": {
         "type": "object",
         "properties": {
           "cities": {
             "type": "array"
+          },
+          "hobbies": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Hobby"
+            }
           }
         }
       }

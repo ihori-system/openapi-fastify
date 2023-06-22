@@ -9,9 +9,7 @@
       "post": {
         "operationId": "postUser",
         "requestBody": {
-          "content": {
-            "application/json": {}
-          }
+          "content": {}
         },
         "responses": {}
       }

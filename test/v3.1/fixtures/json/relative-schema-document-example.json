@@ -1,0 +1,27 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Reference Object Example",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/pet": {
+      "get": {
+        "description": "Returns a pet",
+        "operationId": "getPet",
+        "responses": {
+          "default": {
+            "description": "a pet to be returned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "Pet.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

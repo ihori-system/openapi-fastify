@@ -2,7 +2,7 @@ export const getPetsById = {
     params: {
         type: "object",
         properties: {
-            id: {
+            "id": {
                 type: "integer"
             }
         }

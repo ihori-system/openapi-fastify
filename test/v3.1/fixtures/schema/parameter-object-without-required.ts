@@ -2,7 +2,7 @@ export const getNameById = {
     params: {
         type: "object",
         properties: {
-            id: {
+            "id": {
                 type: "string"
             }
         }

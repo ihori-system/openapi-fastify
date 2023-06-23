@@ -71,6 +71,7 @@ test('generate from json', async (t) => {
   await equal(t, 'parameter-object-with-reference-object')
   await equal(t, 'parameter-object-without-required')
   await equal(t, 'path-item-object-with-parameter-object')
+  await equal(t, 'reference-object-nested')
   await throws(t, 'reference-object-with-invalid-format')
   await equal(t, 'relative-schema-document-example')
   await throws(t, 'request-body-object-without-content')

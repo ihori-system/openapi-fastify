@@ -8,6 +8,7 @@
     "test": "test"
   },
   "scripts": {
+    "generate": "node ../../../cli.js --language esm --input openapi.json --output generated",
     "test": "tap \"test/**/*.test.js\"",
     "start": "fastify start -l info app.js",
     "dev": "fastify start -w -l info -P app.js"

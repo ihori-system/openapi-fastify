@@ -1,5 +1,5 @@
 import { test } from 'tap'
-import { build } from '../../helper'
+import { build } from '../../helper.js'
 
 test('POST pets', async (t) => {
   const app = await build(t)

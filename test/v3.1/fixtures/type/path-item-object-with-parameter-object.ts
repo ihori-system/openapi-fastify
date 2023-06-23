@@ -1,3 +1,3 @@
 export interface getPetsByIdParams {
-    id?: number;
+    "id"?: number;
 }

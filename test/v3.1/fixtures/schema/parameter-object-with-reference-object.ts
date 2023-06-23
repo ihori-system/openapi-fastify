@@ -5,7 +5,7 @@ export const getUser = {
             "token"
         ],
         properties: {
-            token: {
+            "token": {
                 type: "array",
                 items: {
                     type: "integer",

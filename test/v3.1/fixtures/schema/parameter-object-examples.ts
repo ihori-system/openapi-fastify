@@ -2,13 +2,13 @@ export const getUser = {
     querystring: {
         type: "object",
         properties: {
-            id: {
+            "id": {
                 type: "array",
                 items: {
                     type: "string"
                 }
             },
-            freeForm: {
+            "freeForm": {
                 type: "object",
                 additionalProperties: {
                     type: "integer"
@@ -22,7 +22,7 @@ export const getUser = {
             "username"
         ],
         properties: {
-            username: {
+            "username": {
                 type: "string"
             }
         }
@@ -33,7 +33,7 @@ export const getUser = {
             "token"
         ],
         properties: {
-            token: {
+            "token": {
                 type: "array",
                 items: {
                     type: "integer",

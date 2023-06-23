@@ -5,7 +5,7 @@ export const getPetsById = {
             "id"
         ],
         properties: {
-            id: {
+            "id": {
                 type: "array",
                 items: {
                     type: "string"

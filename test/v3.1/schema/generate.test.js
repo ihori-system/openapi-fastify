@@ -72,6 +72,7 @@ test('generate from json', async (t) => {
   await equal(t, 'parameter-object-without-required')
   await equal(t, 'path-item-object-with-parameter-object')
   await throws(t, 'reference-object-with-invalid-format')
+  await equal(t, 'relative-schema-document-example')
   await throws(t, 'request-body-object-without-content')
   await equal(t, 'request-body-object-without-schema')
   await equal(t, 'response-object-without-content')
@@ -98,6 +99,11 @@ test('generate from yaml', async (t) => {
   await equal(t, 'non-oauth-scopes')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.1/webhook-example.json
   await equal(t, 'webhook-example')
+
+  /**
+   * Custom fixtures
+   */
+  await equal(t, 'relative-schema-document-example')
 })
 
 test('unknown file type', async (t) => {

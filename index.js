@@ -44,7 +44,7 @@ function readAndGenerateType (inputPath) {
   } else if (ext === '.yaml' || ext === '.yml') {
     openapiObject = yaml.load(inputRaw)
   } else {
-    throw new Error(`'unknown input file type. valid extensions are '.json' or '.yaml'. given input path: ${inputPath}`)
+    throw new Error(`'unknown input file type. valid extensions are '.json' or '.yaml', '.yml'. given input path: ${inputPath}`)
   }
 
   if (openapiObject.openapi.startsWith('3.1')) {

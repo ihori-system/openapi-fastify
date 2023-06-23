@@ -6,6 +6,10 @@ This project was bootstrapped with Fastify-CLI.
 
 In the project directory, you can run:
 
+### `npm run generate`
+
+Generate schemas/types from OpenAPI specification.
+
 ### `npm run dev`
 
 To start the app in dev mode.\

@@ -18,11 +18,16 @@ ${pc.bold('USAGE')}
   $ openapi-fastify --input <file> --output <path> [options]
 
 ${pc.bold('OPTIONS')}
-  --help      help about this command
-  --input     OAS file
-  --omit      omit schema or type <schema | type>
-  --output    output path
+  --help        help about this command
+  --input       OAS file
+  --language    code syntax <ts | esm>
+  --output      output path
 `
+
+const SYNTAX = {
+  ESM: 'esm',
+  TYPESCRIPT: 'ts'
+}
 
 const buildErrorMessage = (error) => `
 ${pc.cyan('[openapi-fastify]')} ${pc.bgRed('ERROR')} ${error}
@@ -41,17 +46,27 @@ const main = async () => {
     return console.info(HELP)
   }
 
+  const schemaAst = readAndGenerateSchema(argv.input)
+  const typeAst = readAndGenerateType(argv.input)
+
   const printer = ts.createPrinter({ newLine: ts.NewLineKind.LineFeed })
 
-  fs.writeFileSync(
-    path.join(process.cwd(), argv.output, 'schemas.ts'),
-    printer.printFile(readAndGenerateSchema(argv.input))
-  )
+  if (argv.language === SYNTAX.ESM) {
+    fs.writeFileSync(
+      path.join(process.cwd(), argv.output, 'schemas.js'),
+      ts.transpile(printer.printFile(schemaAst), { target: ts.ScriptTarget.ESNext })
+    )
+  } else { // TypeScript
+    fs.writeFileSync(
+      path.join(process.cwd(), argv.output, 'schemas.ts'),
+      printer.printFile(schemaAst)
+    )
 
-  fs.writeFileSync(
-    path.join(process.cwd(), argv.output, 'interfaces.ts'),
-    printer.printFile(readAndGenerateType(argv.input))
-  )
+    fs.writeFileSync(
+      path.join(process.cwd(), argv.output, 'interfaces.ts'),
+      printer.printFile(typeAst)
+    )
+  }
 }
 
 main()

@@ -94,6 +94,7 @@ test('generate from json', async (t) => {
   await throws(t, 'schema-object-with-type-null')
   await equal(t, 'schema-object-without-properties')
   await throws(t, 'server-object-without-url')
+  await throws(t, 'server-variable-object-without-default')
 })
 
 test('generate from yaml', async (t) => {

@@ -11,6 +11,19 @@ Command line tool for Fastify, Generate schemas from OpenAPI JSON.
 npx openapi-fastify --input <file> --output <path> [options]
 ```
 
+## Options
+
+```
+USAGE
+  $ openapi-fastify --input <file> --output <path> [options]
+
+OPTIONS
+  --help        help about this command
+  --input       OAS file
+  --language    code syntax <ts | esm>
+  --output      output path
+```
+
 ## Examples
 
 | OpenAPI Version | Language | Example |

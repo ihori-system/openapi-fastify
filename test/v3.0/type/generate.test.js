@@ -92,6 +92,7 @@ test('generate from json', async (t) => {
   await throws(t, 'schema-object-with-type-null')
   await equal(t, 'schema-object-with-type-primitive')
   await equal(t, 'schema-object-without-properties')
+  await throws(t, 'server-object-without-url')
 })
 
 test('generate from yml', async (t) => {

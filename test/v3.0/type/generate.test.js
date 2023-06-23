@@ -76,6 +76,7 @@ test('generate from json', async (t) => {
    */
   await equal(t, 'components-object-without-schemas')
   await throws(t, 'info-object-without-title')
+  await throws(t, 'info-object-without-version')
   await throws(t, 'openapi-object-without-info-object')
   await throws(t, 'openapi-object-without-paths-object')
   await throws(t, 'operation-object-without-responses')

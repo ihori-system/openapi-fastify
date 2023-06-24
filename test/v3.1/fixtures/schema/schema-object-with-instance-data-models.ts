@@ -6,28 +6,57 @@ export const getUser = {
                     schema: {
                         type: "object",
                         required: [
-                            "string",
-                            "integer",
-                            "number",
+                            "null",
+                            "boolean",
+                            "object",
                             "emptyArray",
                             "stringArray",
                             "integerArray",
                             "numberArray",
                             "arrayArray",
                             "emptyObject",
-                            "object",
-                            "boolean",
-                            "null"
+                            "number",
+                            "string",
+                            "integer",
+                            "multiple"
                         ],
                         properties: {
-                            string: {
-                                type: "string"
+                            null: {
+                                type: "null"
                             },
-                            integer: {
-                                type: "integer"
+                            boolean: {
+                                type: "boolean"
                             },
-                            number: {
-                                type: "number"
+                            object: {
+                                type: "object",
+                                required: [
+                                    "null",
+                                    "boolean",
+                                    "object",
+                                    "array",
+                                    "string",
+                                    "integer"
+                                ],
+                                properties: {
+                                    null: {
+                                        type: "null"
+                                    },
+                                    boolean: {
+                                        type: "boolean"
+                                    },
+                                    object: {
+                                        type: "object"
+                                    },
+                                    array: {
+                                        type: "array"
+                                    },
+                                    string: {
+                                        type: "string"
+                                    },
+                                    integer: {
+                                        type: "integer"
+                                    }
+                                }
                             },
                             emptyArray: {
                                 type: "array"
@@ -59,42 +88,20 @@ export const getUser = {
                             emptyObject: {
                                 type: "object"
                             },
-                            object: {
-                                type: "object",
-                                required: [
+                            number: {
+                                type: "number"
+                            },
+                            string: {
+                                type: "string"
+                            },
+                            integer: {
+                                type: "integer"
+                            },
+                            multiple: {
+                                type: [
                                     "string",
-                                    "integer",
-                                    "array",
-                                    "object",
-                                    "boolean",
                                     "null"
-                                ],
-                                properties: {
-                                    string: {
-                                        type: "string"
-                                    },
-                                    integer: {
-                                        type: "integer"
-                                    },
-                                    array: {
-                                        type: "array"
-                                    },
-                                    object: {
-                                        type: "object"
-                                    },
-                                    boolean: {
-                                        type: "boolean"
-                                    },
-                                    null: {
-                                        type: "null"
-                                    }
-                                }
-                            },
-                            boolean: {
-                                type: "boolean"
-                            },
-                            null: {
-                                type: "null"
+                                ]
                             }
                         }
                     }

@@ -1,7 +1,15 @@
 export interface getUserReply200 {
-    string: string;
-    integer: number;
-    number: number;
+    null: null;
+    boolean: boolean;
+    object: {
+        null: null;
+        boolean: boolean;
+        object: {};
+        array: [
+        ];
+        string: string;
+        integer: number;
+    };
     emptyArray: [
     ];
     stringArray: string[];
@@ -10,15 +18,8 @@ export interface getUserReply200 {
     arrayArray: [
     ][];
     emptyObject: {};
-    object: {
-        string: string;
-        integer: number;
-        array: [
-        ];
-        object: {};
-        boolean: boolean;
-        null: null;
-    };
-    boolean: boolean;
-    null: null;
+    number: number;
+    string: string;
+    integer: number;
+    multiple: string | null;
 }

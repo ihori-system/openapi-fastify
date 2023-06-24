@@ -86,6 +86,7 @@ test('generate from json', async (t) => {
   await equal(t, 'schema-object-with-instance-data-models')
   await equal(t, 'schema-object-with-invalid-properties')
   await equal(t, 'schema-object-with-validation-numeric')
+  await equal(t, 'schema-object-with-validation-string')
   await equal(t, 'schema-object-without-required')
 })
 

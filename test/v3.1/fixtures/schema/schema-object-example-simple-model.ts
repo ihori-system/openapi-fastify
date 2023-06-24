@@ -17,6 +17,7 @@ export const getUser = {
                             },
                             age: {
                                 type: "integer",
+                                minimum: 0,
                                 format: "int32"
                             }
                         }

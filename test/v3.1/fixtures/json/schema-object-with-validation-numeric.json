@@ -1,0 +1,51 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Schema Object Example Simple Model",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/user": {
+      "get": {
+        "operationId": "getUser",
+        "responses": {
+          "200": {
+            "description": "Returns a user",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "name"
+                  ],
+                  "properties": {
+                    "multipleOf": {
+                      "type": "number",
+                      "multipleOf": 5
+                    },
+                    "maximum": {
+                      "type": "number",
+                      "maximum": 10
+                    },
+                    "exclusiveMaximum": {
+                      "type": "number",
+                      "exclusiveMaximum": 15
+                    },
+                    "minimum": {
+                      "type": "number",
+                      "minimum": 20
+                    },
+                    "exclusiveMinimum": {
+                      "type": "number",
+                      "exclusiveMinimum": 25
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

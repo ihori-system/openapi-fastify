@@ -1,3 +1,1 @@
-export const postUser = {
-    body: {}
-};
+export const postUser = {};

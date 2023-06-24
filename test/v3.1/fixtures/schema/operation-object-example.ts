@@ -10,7 +10,6 @@ export const updatePetWithForm = {
             }
         }
     },
-    body: {},
     response: {
         200: {
             content: {

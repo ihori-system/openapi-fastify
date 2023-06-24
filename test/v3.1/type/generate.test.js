@@ -50,6 +50,8 @@ test('generate from json', async (t) => {
   await equal(t, 'responses-object-example')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#reference-object-example
   await equal(t, 'reference-object-example')
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#relative-schema-document-example
+  await equal(t, 'relative-schema-document-example')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#primitive-sample
   await equal(t, 'schema-object-example-primitive-sample')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#simple-model
@@ -73,7 +75,7 @@ test('generate from json', async (t) => {
   await equal(t, 'path-item-object-with-parameter-object')
   await equal(t, 'reference-object-nested')
   await throws(t, 'reference-object-with-invalid-format')
-  await equal(t, 'relative-schema-document-example')
+  await equal(t, 'request-body-object-with-reference-object')
   await throws(t, 'request-body-object-without-content')
   await equal(t, 'request-body-object-without-schema')
   await equal(t, 'response-object-without-content')

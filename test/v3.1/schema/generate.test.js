@@ -68,6 +68,7 @@ test('generate from json', async (t) => {
   /**
    * Custom fixtures
    */
+  await throws(t, 'empty')
   await throws(t, 'openapi-object-without-info-object')
   await equal(t, 'openapi-object-without-paths-object')
   await equal(t, 'parameter-object-with-reference-object')

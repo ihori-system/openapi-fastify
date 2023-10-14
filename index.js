@@ -23,6 +23,12 @@ function readAndGenerateSchema (inputPath) {
     throw new Error(`'unknown input file type. valid extensions are '.json' or '.yaml'. given input path: ${inputPath}`)
   }
 
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#openapi-object
+  // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#openapi-object
+  if ('openapi' in openapiObject === false) {
+    throw new Error('OpenAPI Object requires openapi field.')
+  }
+
   if (openapiObject.openapi.startsWith('3.1')) {
     return generateSchemaV31(inputPath, openapiObject)
   } else if (openapiObject.openapi.startsWith('3.0')) {

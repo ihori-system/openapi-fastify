@@ -70,4 +70,7 @@ const main = async () => {
 }
 
 main()
-  .catch(error => console.error(buildErrorMessage(error)))
+  .catch(error => {
+    console.error(buildErrorMessage(error))
+    process.exit(1)
+  })

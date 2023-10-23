@@ -83,6 +83,7 @@ test('generate from json', async (t) => {
   await throws(t, 'operation-id-with-dash')
   await throws(t, 'operation-object-without-responses')
   await throws(t, 'reference-object-with-invalid-format')
+  await equal(t, 'request-body-object-with-reference-object')
   await throws(t, 'request-body-object-without-content')
   await equal(t, 'request-body-object-without-media-type-object')
   await equal(t, 'request-body-object-without-schema')

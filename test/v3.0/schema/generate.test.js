@@ -86,6 +86,7 @@ test('generate from json', async (t) => {
   await throws(t, 'operation-id-with-white-space')
   await throws(t, 'operation-object-without-operation-id')
   await throws(t, 'operation-object-without-responses')
+  await equal(t, 'reference-object-nested')
   await throws(t, 'reference-object-with-invalid-format')
   await throws(t, 'request-body-object-without-content')
   await equal(t, 'request-body-object-without-media-type-object')
@@ -127,6 +128,11 @@ test('generate from yaml', async (t) => {
   await equal(t, 'petstore')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/uspto.yaml
   await throws(t, 'uspto')
+
+  /**
+   * Custom fixtures
+   */
+  await equal(t, 'relative-schema-document-example')
 })
 
 test('generate from yml', async (t) => {

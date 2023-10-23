@@ -27,8 +27,7 @@ test('generate from json', async (t) => {
   // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/api-with-examples.json
   await equal(t, 'api-with-examples')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/callback-example.json
-  // Disabled because this example lacks operation ID
-  // await throws(t, 'callback-example')
+  await throws(t, 'callback-example')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/link-example.json
   await equal(t, 'link-example')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore-expanded.json
@@ -83,6 +82,7 @@ test('generate from json', async (t) => {
   await throws(t, 'license-object-without-name')
   await throws(t, 'openapi-object-without-info-object')
   await throws(t, 'openapi-object-without-paths-object')
+  await throws(t, 'operation-id-with-dash')
   await throws(t, 'operation-id-with-white-space')
   await throws(t, 'operation-object-without-operation-id')
   await throws(t, 'operation-object-without-responses')
@@ -118,8 +118,7 @@ test('generate from yaml', async (t) => {
   // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/api-with-examples.yaml
   await equal(t, 'api-with-examples')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/callback-example.yaml
-  // Disabled because this example lacks operation ID
-  // await throws(t, 'callback-example')
+  await throws(t, 'callback-example')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/link-example.yaml
   await equal(t, 'link-example')
   // https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore-expanded.yaml

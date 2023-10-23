@@ -1,4 +1,5 @@
 export const updatePetWithForm = {
+    body: {},
     params: {
         type: "object",
         required: [
@@ -10,7 +11,6 @@ export const updatePetWithForm = {
             }
         }
     },
-    body: {},
     response: {
         200: {
             content: {

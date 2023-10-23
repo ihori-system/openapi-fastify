@@ -551,6 +551,7 @@ export const deletePet = {
     }
 };
 export const uploadFile = {
+    body: {},
     querystring: {
         type: "object",
         properties: {
@@ -571,7 +572,6 @@ export const uploadFile = {
             }
         }
     },
-    body: {},
     response: {
         200: {
             content: {
@@ -991,17 +991,6 @@ export const getUserByName = {
     }
 };
 export const updateUser = {
-    params: {
-        type: "object",
-        required: [
-            "username"
-        ],
-        properties: {
-            username: {
-                type: "string"
-            }
-        }
-    },
     body: {
         type: "object",
         properties: {
@@ -1030,6 +1019,17 @@ export const updateUser = {
             userStatus: {
                 type: "integer",
                 format: "int32"
+            }
+        }
+    },
+    params: {
+        type: "object",
+        required: [
+            "username"
+        ],
+        properties: {
+            username: {
+                type: "string"
             }
         }
     },

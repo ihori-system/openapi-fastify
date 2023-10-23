@@ -1,12 +1,14 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "Operation Object without responses",
+    "title": "Operation Object without operationId",
     "version": "1.0.0"
   },
   "paths": {
     "/": {
-      "get": {}
+      "get": {
+        "responses": {}
+      }
     }
   }
 }

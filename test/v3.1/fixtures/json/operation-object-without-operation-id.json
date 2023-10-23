@@ -1,0 +1,14 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Operation Object without operationId",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "responses": {}
+      }
+    }
+  }
+}

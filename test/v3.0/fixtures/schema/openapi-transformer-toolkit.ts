@@ -551,7 +551,6 @@ export const deletePet = {
     }
 };
 export const uploadFile = {
-    body: {},
     querystring: {
         type: "object",
         properties: {

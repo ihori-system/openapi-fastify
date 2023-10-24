@@ -9,6 +9,10 @@ export const getUser = {
                             name: {
                                 type: "string",
                                 nullable: true
+                            },
+                            age: {
+                                type: "integer",
+                                nullable: true
                             }
                         }
                     }

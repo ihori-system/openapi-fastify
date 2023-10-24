@@ -98,6 +98,7 @@ test('generate from json', async (t) => {
   await equal(t, 'schema-object-with-empty-array')
   await equal(t, 'schema-object-with-enum')
   await throws(t, 'schema-object-with-invalid-enum')
+  await equal(t, 'schema-object-with-nullable')
   await throws(t, 'schema-object-with-type-null')
   await equal(t, 'schema-object-without-properties')
   await throws(t, 'server-object-without-url')

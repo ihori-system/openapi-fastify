@@ -1,0 +1,32 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Schema Object with nullable",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/user": {
+      "get": {
+        "operationId": "getUser",
+        "responses": {
+          "200": {
+            "description": "Returns a user",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "nullable": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

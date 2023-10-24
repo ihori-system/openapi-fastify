@@ -1,0 +1,32 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Schema Object with enum",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/user": {
+      "get": {
+        "operationId": "getUser",
+        "responses": {
+          "200": {
+            "description": "Returns a user",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "city": {
+                      "type": "string",
+                      "enum": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -89,6 +89,7 @@ test('generate from json', async (t) => {
   await equal(t, 'schema-object-with-array')
   await equal(t, 'schema-object-with-enum')
   await equal(t, 'schema-object-with-instance-data-models')
+  await throws(t, 'schema-object-with-invalid-enum')
   await equal(t, 'schema-object-with-invalid-properties')
   await equal(t, 'schema-object-with-validation-numeric')
   await equal(t, 'schema-object-with-validation-string')

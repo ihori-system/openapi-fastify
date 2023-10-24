@@ -3,7 +3,7 @@ const test = require('node:test')
 const ts = require('typescript')
 const {
   toOASTypeNode,
-  toPrimitiveNode,
+  toPrimitiveTypeNode,
   toTypeNode
 } = require('../../../lib/v3.1/type/parse')
 
@@ -19,23 +19,23 @@ test('toOASTypeNode', async (t) => {
 
 test('toPrimitiveNode', async (t) => {
   await t.test('null', () => {
-    assert.deepEqual(toPrimitiveNode('null'), ts.factory.createLiteralTypeNode(ts.factory.createNull()))
+    assert.deepEqual(toPrimitiveTypeNode('null'), ts.factory.createLiteralTypeNode(ts.factory.createNull()))
   })
 
   await t.test('boolean', () => {
-    assert.deepEqual(toPrimitiveNode('boolean'), ts.factory.createKeywordTypeNode(ts.SyntaxKind.BooleanKeyword))
+    assert.deepEqual(toPrimitiveTypeNode('boolean'), ts.factory.createKeywordTypeNode(ts.SyntaxKind.BooleanKeyword))
   })
 
   await t.test('number', () => {
-    assert.deepEqual(toPrimitiveNode('number'), ts.factory.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword))
+    assert.deepEqual(toPrimitiveTypeNode('number'), ts.factory.createKeywordTypeNode(ts.SyntaxKind.NumberKeyword))
   })
 
   await t.test('string', () => {
-    assert.deepEqual(toPrimitiveNode('string'), ts.factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword))
+    assert.deepEqual(toPrimitiveTypeNode('string'), ts.factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword))
   })
 
   await t.test('unexpected type', () => {
-    assert.throws(() => toPrimitiveNode('xxxxx'))
+    assert.throws(() => toPrimitiveTypeNode('xxxxx'))
   })
 })
 

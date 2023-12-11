@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Schema Object Example Simple Model",
+    "title": "Schema Object with validation for numeric type",
     "version": "1.0.0"
   },
   "paths": {

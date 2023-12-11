@@ -8,6 +8,7 @@ export const index = {
                         properties: {
                             string: {
                                 type: "string",
+                                maxLength: 100,
                                 minLength: 1
                             }
                         }

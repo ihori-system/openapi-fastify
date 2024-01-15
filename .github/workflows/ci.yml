@@ -21,15 +21,15 @@ jobs:
 
     steps:
       # https://github.com/actions/checkout
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       # https://github.com/streetsidesoftware/cspell-action
-      - uses: streetsidesoftware/cspell-action@v2
+      - uses: streetsidesoftware/cspell-action@v5
         with:
           incremental_files_only: false
 
       # https://github.com/actions/setup-node
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
           cache: 'npm'
@@ -50,10 +50,10 @@ jobs:
 
     steps:
       # https://github.com/actions/checkout
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       # https://github.com/actions/setup-node
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
           cache: 'npm'
@@ -80,10 +80,10 @@ jobs:
 
     steps:
       # https://github.com/actions/checkout
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       # https://github.com/actions/setup-node
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
           cache: 'npm'

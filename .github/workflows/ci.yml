@@ -17,7 +17,7 @@ jobs:
     strategy:
       matrix:
         # https://github.com/nodejs/release#release-schedule
-        node: [ 16, 18, 20 ]
+        node: [ 18, 20, 21 ]
 
     steps:
       # https://github.com/actions/checkout
@@ -46,7 +46,7 @@ jobs:
     strategy:
       matrix:
         # https://github.com/nodejs/release#release-schedule
-        node: [ 16, 18, 20 ]
+        node: [ 18, 20, 21 ]
 
     steps:
       # https://github.com/actions/checkout
@@ -60,7 +60,7 @@ jobs:
           cache-dependency-path: 'examples/v3.0/petstore-esm/package-lock.json'
 
       - run: npm ci
-  
+
       - run: npm ci
         working-directory: examples/v3.0/petstore-esm
 
@@ -76,7 +76,7 @@ jobs:
     strategy:
       matrix:
         # https://github.com/nodejs/release#release-schedule
-        node: [ 16, 18, 20 ]
+        node: [ 18, 20, 21 ]
 
     steps:
       # https://github.com/actions/checkout
@@ -90,7 +90,7 @@ jobs:
           cache-dependency-path: 'examples/v3.0/petstore-ts/package-lock.json'
 
       - run: npm ci
-  
+
       - run: npm ci
         working-directory: examples/v3.0/petstore-ts
 

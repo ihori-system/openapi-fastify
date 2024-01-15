@@ -5,7 +5,7 @@ export const updatePetWithForm = {
             "petId"
         ],
         properties: {
-            petId: {
+            "petId": {
                 type: "string"
             }
         }

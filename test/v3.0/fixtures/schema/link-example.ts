@@ -5,7 +5,7 @@ export const getUserByName = {
             "username"
         ],
         properties: {
-            username: {
+            "username": {
                 type: "string"
             }
         }
@@ -37,7 +37,7 @@ export const getRepositoriesByOwner = {
             "username"
         ],
         properties: {
-            username: {
+            "username": {
                 type: "string"
             }
         }
@@ -81,10 +81,10 @@ export const getRepository = {
             "slug"
         ],
         properties: {
-            username: {
+            "username": {
                 type: "string"
             },
-            slug: {
+            "slug": {
                 type: "string"
             }
         }
@@ -121,7 +121,7 @@ export const getPullRequestsByRepository = {
     querystring: {
         type: "object",
         properties: {
-            state: {
+            "state": {
                 enum: [
                     "open",
                     "merged",
@@ -138,10 +138,10 @@ export const getPullRequestsByRepository = {
             "slug"
         ],
         properties: {
-            username: {
+            "username": {
                 type: "string"
             },
-            slug: {
+            "slug": {
                 type: "string"
             }
         }
@@ -208,13 +208,13 @@ export const getPullRequestsById = {
             "pid"
         ],
         properties: {
-            username: {
+            "username": {
                 type: "string"
             },
-            slug: {
+            "slug": {
                 type: "string"
             },
-            pid: {
+            "pid": {
                 type: "string"
             }
         }
@@ -278,13 +278,13 @@ export const mergePullRequest = {
             "pid"
         ],
         properties: {
-            username: {
+            "username": {
                 type: "string"
             },
-            slug: {
+            "slug": {
                 type: "string"
             },
-            pid: {
+            "pid": {
                 type: "string"
             }
         }

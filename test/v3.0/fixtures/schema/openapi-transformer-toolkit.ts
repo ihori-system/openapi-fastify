@@ -254,7 +254,7 @@ export const findPetsByStatus = {
     querystring: {
         type: "object",
         properties: {
-            status: {
+            "status": {
                 enum: [
                     "available",
                     "pending",
@@ -338,7 +338,7 @@ export const findPetsByTags = {
     querystring: {
         type: "object",
         properties: {
-            tags: {
+            "tags": {
                 type: "array",
                 items: {
                     type: "string"
@@ -423,7 +423,7 @@ export const getPetById = {
             "petId"
         ],
         properties: {
-            petId: {
+            "petId": {
                 type: "integer",
                 format: "int64"
             }
@@ -501,10 +501,10 @@ export const updatePetWithForm = {
     querystring: {
         type: "object",
         properties: {
-            name: {
+            "name": {
                 type: "string"
             },
-            status: {
+            "status": {
                 type: "string"
             }
         }
@@ -515,7 +515,7 @@ export const updatePetWithForm = {
             "petId"
         ],
         properties: {
-            petId: {
+            "petId": {
                 type: "integer",
                 format: "int64"
             }
@@ -532,7 +532,7 @@ export const deletePet = {
             "petId"
         ],
         properties: {
-            petId: {
+            "petId": {
                 type: "integer",
                 format: "int64"
             }
@@ -541,7 +541,7 @@ export const deletePet = {
     headers: {
         type: "object",
         properties: {
-            api_key: {
+            "api_key": {
                 type: "string"
             }
         }
@@ -554,7 +554,7 @@ export const uploadFile = {
     querystring: {
         type: "object",
         properties: {
-            additionalMetadata: {
+            "additionalMetadata": {
                 type: "string"
             }
         }
@@ -565,7 +565,7 @@ export const uploadFile = {
             "petId"
         ],
         properties: {
-            petId: {
+            "petId": {
                 type: "integer",
                 format: "int64"
             }
@@ -690,7 +690,7 @@ export const getOrderById = {
             "orderId"
         ],
         properties: {
-            orderId: {
+            "orderId": {
                 type: "integer",
                 format: "int64"
             }
@@ -746,7 +746,7 @@ export const deleteOrder = {
             "orderId"
         ],
         properties: {
-            orderId: {
+            "orderId": {
                 type: "integer",
                 format: "int64"
             }
@@ -909,10 +909,10 @@ export const loginUser = {
     querystring: {
         type: "object",
         properties: {
-            username: {
+            "username": {
                 type: "string"
             },
-            password: {
+            "password": {
                 type: "string"
             }
         }
@@ -942,7 +942,7 @@ export const getUserByName = {
             "username"
         ],
         properties: {
-            username: {
+            "username": {
                 type: "string"
             }
         }
@@ -1027,7 +1027,7 @@ export const updateUser = {
             "username"
         ],
         properties: {
-            username: {
+            "username": {
                 type: "string"
             }
         }
@@ -1043,7 +1043,7 @@ export const deleteUser = {
             "username"
         ],
         properties: {
-            username: {
+            "username": {
                 type: "string"
             }
         }

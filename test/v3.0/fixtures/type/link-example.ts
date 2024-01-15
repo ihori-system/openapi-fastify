@@ -1,12 +1,12 @@
 export interface getUserByNameParams {
-    username: string;
+    "username": string;
 }
 export interface getUserByNameReply200 {
     username?: string;
     uuid?: string;
 }
 export interface getRepositoriesByOwnerParams {
-    username: string;
+    "username": string;
 }
 export type getRepositoriesByOwnerReply200 = {
     slug?: string;
@@ -16,8 +16,8 @@ export type getRepositoriesByOwnerReply200 = {
     };
 }[];
 export interface getRepositoryParams {
-    username: string;
-    slug: string;
+    "username": string;
+    "slug": string;
 }
 export interface getRepositoryReply200 {
     slug?: string;
@@ -27,11 +27,11 @@ export interface getRepositoryReply200 {
     };
 }
 export interface getPullRequestsByRepositoryQuerystring {
-    state?: "open" | "merged" | "declined";
+    "state"?: "open" | "merged" | "declined";
 }
 export interface getPullRequestsByRepositoryParams {
-    username: string;
-    slug: string;
+    "username": string;
+    "slug": string;
 }
 export type getPullRequestsByRepositoryReply200 = {
     id?: number;
@@ -49,9 +49,9 @@ export type getPullRequestsByRepositoryReply200 = {
     };
 }[];
 export interface getPullRequestsByIdParams {
-    username: string;
-    slug: string;
-    pid: string;
+    "username": string;
+    "slug": string;
+    "pid": string;
 }
 export interface getPullRequestsByIdReply200 {
     id?: number;
@@ -69,9 +69,9 @@ export interface getPullRequestsByIdReply200 {
     };
 }
 export interface mergePullRequestParams {
-    username: string;
-    slug: string;
-    pid: string;
+    "username": string;
+    "slug": string;
+    "pid": string;
 }
 export interface userSchema {
     username?: string;

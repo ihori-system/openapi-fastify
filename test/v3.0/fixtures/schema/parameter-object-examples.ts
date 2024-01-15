@@ -2,13 +2,13 @@ export const index = {
     querystring: {
         type: "object",
         properties: {
-            id: {
+            "id": {
                 type: "array",
                 items: {
                     type: "string"
                 }
             },
-            freeForm: {
+            "freeForm": {
                 type: "object"
             }
         }
@@ -19,7 +19,7 @@ export const index = {
             "username"
         ],
         properties: {
-            username: {
+            "username": {
                 type: "string"
             }
         }
@@ -30,7 +30,7 @@ export const index = {
             "token"
         ],
         properties: {
-            token: {
+            "token": {
                 type: "array",
                 items: {
                     type: "integer",

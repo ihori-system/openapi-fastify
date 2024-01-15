@@ -82,6 +82,7 @@ test('generate from json', async (t) => {
   await throws(t, 'openapi-object-without-paths-object')
   await throws(t, 'operation-id-with-dash')
   await throws(t, 'operation-object-without-responses')
+  await equal(t, 'parameter-object-with-reference-object')
   await throws(t, 'reference-object-with-invalid-format')
   await equal(t, 'request-body-object-with-reference-object')
   await throws(t, 'request-body-object-without-content')

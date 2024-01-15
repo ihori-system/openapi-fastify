@@ -1,0 +1,39 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Response Object with Reference Object",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/name": {
+      "get": {
+        "description": "Returns a name",
+        "operationId": "getNameById",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/GetNameByIdResponse"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "responses": {
+      "GetNameByIdResponse": {
+        "description": "a name",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

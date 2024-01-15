@@ -60,7 +60,7 @@ export interface addPetReply200 {
 }
 export interface findPetsByStatusQuerystring {
     // Status values that need to be considered for filter
-    status?: "available" | "pending" | "sold";
+    "status"?: "available" | "pending" | "sold";
 }
 export type findPetsByStatusReply200 = {
     id?: number;
@@ -79,7 +79,7 @@ export type findPetsByStatusReply200 = {
 }[];
 export interface findPetsByTagsQuerystring {
     // Tags to filter by
-    tags?: string[];
+    "tags"?: string[];
 }
 export type findPetsByTagsReply200 = {
     id?: number;
@@ -98,7 +98,7 @@ export type findPetsByTagsReply200 = {
 }[];
 export interface getPetByIdParams {
     // ID of pet to return
-    petId: number;
+    "petId": number;
 }
 export interface getPetByIdReply200 {
     id?: number;
@@ -117,28 +117,28 @@ export interface getPetByIdReply200 {
 }
 export interface updatePetWithFormQuerystring {
     // Name of pet that needs to be updated
-    name?: string;
+    "name"?: string;
     // Status of pet that needs to be updated
-    status?: string;
+    "status"?: string;
 }
 export interface updatePetWithFormParams {
     // ID of pet that needs to be updated
-    petId: number;
+    "petId": number;
 }
 export interface deletePetParams {
     // Pet id to delete
-    petId: number;
+    "petId": number;
 }
 export interface deletePetHeaders {
-    api_key?: string;
+    "api_key"?: string;
 }
 export interface uploadFileQuerystring {
     // Additional Metadata
-    additionalMetadata?: string;
+    "additionalMetadata"?: string;
 }
 export interface uploadFileParams {
     // ID of pet to update
-    petId: number;
+    "petId": number;
 }
 export interface uploadFileReply200 {
     code?: number;
@@ -167,7 +167,7 @@ export interface placeOrderReply200 {
 }
 export interface getOrderByIdParams {
     // ID of order that needs to be fetched
-    orderId: number;
+    "orderId": number;
 }
 export interface getOrderByIdReply200 {
     id?: number;
@@ -180,7 +180,7 @@ export interface getOrderByIdReply200 {
 }
 export interface deleteOrderParams {
     // ID of the order that needs to be deleted
-    orderId: number;
+    "orderId": number;
 }
 export interface createUserBody {
     id?: number;
@@ -219,14 +219,14 @@ export interface createUsersWithListInputReply200 {
 }
 export interface loginUserQuerystring {
     // The user name for login
-    username?: string;
+    "username"?: string;
     // The password for login in clear text
-    password?: string;
+    "password"?: string;
 }
 export type loginUserReply200 = string;
 export interface getUserByNameParams {
     // The name that needs to be fetched. Use user1 for testing.
-    username: string;
+    "username": string;
 }
 export interface getUserByNameReply200 {
     id?: number;
@@ -252,11 +252,11 @@ export interface updateUserBody {
 }
 export interface updateUserParams {
     // name that need to be deleted
-    username: string;
+    "username": string;
 }
 export interface deleteUserParams {
     // The name that needs to be deleted
-    username: string;
+    "username": string;
 }
 export interface OrderSchema {
     id?: number;

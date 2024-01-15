@@ -2,7 +2,7 @@ export const listPets = {
     querystring: {
         type: "object",
         properties: {
-            limit: {
+            "limit": {
                 type: "integer",
                 format: "int32",
                 maximum: 100
@@ -97,7 +97,7 @@ export const showPetById = {
             "petId"
         ],
         properties: {
-            petId: {
+            "petId": {
                 type: "string"
             }
         }

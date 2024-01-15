@@ -1,6 +1,6 @@
 export interface listPetsQuerystring {
     // How many items to return at one time (max 100)
-    limit?: number;
+    "limit"?: number;
 }
 export type listPetsReply200 = {
     id: number;
@@ -17,7 +17,7 @@ export interface createPetsReplyDefault {
 }
 export interface showPetByIdParams {
     // The id of the pet to retrieve
-    petId: string;
+    "petId": string;
 }
 export interface showPetByIdReply200 {
     id: number;

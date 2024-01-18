@@ -11,3 +11,4 @@ export interface indexHeaders {
     // token to be passed as a header
     "token": number[];
 }
+export type indexReply200 = undefined;

@@ -11,6 +11,7 @@ export interface listPetsReplyDefault {
     code: number;
     message: string;
 }
+export type createPetsReply201 = undefined;
 export interface createPetsReplyDefault {
     code: number;
     message: string;

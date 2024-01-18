@@ -28,6 +28,9 @@ export interface updatePetReply200 {
     // pet status in the store
     status?: "available" | "pending" | "sold";
 }
+export type updatePetReply400 = undefined;
+export type updatePetReply404 = undefined;
+export type updatePetReply405 = undefined;
 export interface addPetBody {
     id?: number;
     name: string;
@@ -58,6 +61,7 @@ export interface addPetReply200 {
     // pet status in the store
     status?: "available" | "pending" | "sold";
 }
+export type addPetReply405 = undefined;
 export interface findPetsByStatusQuerystring {
     // Status values that need to be considered for filter
     "status"?: "available" | "pending" | "sold";
@@ -77,6 +81,7 @@ export type findPetsByStatusReply200 = {
     // pet status in the store
     status?: "available" | "pending" | "sold";
 }[];
+export type findPetsByStatusReply400 = undefined;
 export interface findPetsByTagsQuerystring {
     // Tags to filter by
     "tags"?: string[];
@@ -96,6 +101,7 @@ export type findPetsByTagsReply200 = {
     // pet status in the store
     status?: "available" | "pending" | "sold";
 }[];
+export type findPetsByTagsReply400 = undefined;
 export interface getPetByIdParams {
     // ID of pet to return
     "petId": number;
@@ -115,6 +121,8 @@ export interface getPetByIdReply200 {
     // pet status in the store
     status?: "available" | "pending" | "sold";
 }
+export type getPetByIdReply400 = undefined;
+export type getPetByIdReply404 = undefined;
 export interface updatePetWithFormQuerystring {
     // Name of pet that needs to be updated
     "name"?: string;
@@ -125,6 +133,7 @@ export interface updatePetWithFormParams {
     // ID of pet that needs to be updated
     "petId": number;
 }
+export type updatePetWithFormReply405 = undefined;
 export interface deletePetParams {
     // Pet id to delete
     "petId": number;
@@ -132,6 +141,7 @@ export interface deletePetParams {
 export interface deletePetHeaders {
     "api_key"?: string;
 }
+export type deletePetReply400 = undefined;
 export interface uploadFileQuerystring {
     // Additional Metadata
     "additionalMetadata"?: string;
@@ -165,6 +175,7 @@ export interface placeOrderReply200 {
     status?: "placed" | "approved" | "delivered";
     complete?: boolean;
 }
+export type placeOrderReply405 = undefined;
 export interface getOrderByIdParams {
     // ID of order that needs to be fetched
     "orderId": number;
@@ -178,10 +189,14 @@ export interface getOrderByIdReply200 {
     status?: "placed" | "approved" | "delivered";
     complete?: boolean;
 }
+export type getOrderByIdReply400 = undefined;
+export type getOrderByIdReply404 = undefined;
 export interface deleteOrderParams {
     // ID of the order that needs to be deleted
     "orderId": number;
 }
+export type deleteOrderReply400 = undefined;
+export type deleteOrderReply404 = undefined;
 export interface createUserBody {
     id?: number;
     username?: string;
@@ -217,6 +232,7 @@ export interface createUsersWithListInputReply200 {
     // User Status
     userStatus?: number;
 }
+export type createUsersWithListInputReplyDefault = undefined;
 export interface loginUserQuerystring {
     // The user name for login
     "username"?: string;
@@ -224,6 +240,8 @@ export interface loginUserQuerystring {
     "password"?: string;
 }
 export type loginUserReply200 = string;
+export type loginUserReply400 = undefined;
+export type logoutUserReplyDefault = undefined;
 export interface getUserByNameParams {
     // The name that needs to be fetched. Use user1 for testing.
     "username": string;
@@ -239,6 +257,8 @@ export interface getUserByNameReply200 {
     // User Status
     userStatus?: number;
 }
+export type getUserByNameReply400 = undefined;
+export type getUserByNameReply404 = undefined;
 export interface updateUserBody {
     id?: number;
     username?: string;
@@ -254,10 +274,13 @@ export interface updateUserParams {
     // name that need to be deleted
     "username": string;
 }
+export type updateUserReplyDefault = undefined;
 export interface deleteUserParams {
     // The name that needs to be deleted
     "username": string;
 }
+export type deleteUserReply400 = undefined;
+export type deleteUserReply404 = undefined;
 export interface OrderSchema {
     id?: number;
     petId?: number;

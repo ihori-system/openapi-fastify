@@ -73,6 +73,7 @@ export interface mergePullRequestParams {
     "slug": string;
     "pid": string;
 }
+export type mergePullRequestReply204 = undefined;
 export interface userSchema {
     username?: string;
     uuid?: string;

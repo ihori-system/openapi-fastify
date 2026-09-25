@@ -1,3 +1,4 @@
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
 name: Continuous Integration
 
 on:
@@ -12,8 +13,8 @@ on:
 
 jobs:
   lib:
-    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idruns-on
-    runs-on: [ubuntu-latest]
+    # https://github.com/actions/runner-images
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
         # https://github.com/nodejs/release#release-schedule
@@ -41,8 +42,8 @@ jobs:
       - run: npm test
 
   v30-petsotre-esm:
-    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idruns-on
-    runs-on: [ubuntu-latest]
+    # https://github.com/actions/runner-images
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
         # https://github.com/nodejs/release#release-schedule
@@ -71,8 +72,8 @@ jobs:
         working-directory: examples/v3.0/petstore-esm
 
   v30-petsotre-ts:
-    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idruns-on
-    runs-on: [ubuntu-latest]
+    # https://github.com/actions/runner-images
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
         # https://github.com/nodejs/release#release-schedule
